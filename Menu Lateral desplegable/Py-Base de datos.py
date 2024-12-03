@@ -1,4 +1,5 @@
 import mysql.connector
+<<<<<<< Updated upstream
 
 config = {
 'user': 'root',
@@ -12,3 +13,11 @@ config = {
 # Conectar a la base de datos
 conn = mysql.connector.connect(**config)
 cursor = conn.cursor()
+=======
+# Configuración de la conexión a la base de datos
+config = {
+'user': 'root',
+'password': 'tu_contraseña',
+'host': 'tu_host', # Puede ser 'localhost' si la base de datos está en tu máquina
+'database': 'tu_base_de_datos',
+>>>>>>> Stashed changes

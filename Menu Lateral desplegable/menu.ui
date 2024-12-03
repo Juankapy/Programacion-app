@@ -602,7 +602,7 @@ border-bottom-left-radius: 20px;
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>imagenes/engranaje.png</normaloff>imagenes/engranaje.png</iconset>
+                <normaloff>barra-de-menus.png</normaloff>barra-de-menus.png</iconset>
               </property>
               <property name="iconSize">
                <size>

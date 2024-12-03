@@ -4,7 +4,20 @@ from PyQt6 import QtCore, QtGui, QtWidgets, uic
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        uic.loadUi("menu.ui", self)  # Carga el archivo menu.ui
+        uic.loadUi("menu.ui", self)
+        # Configura los íconos de los botones
+        self.bt_restaurar.setIcon(QtGui.QIcon("imagenes/new-tab.png"))
+        self.bt_minimizar.setIcon(QtGui.QIcon("imagenes/minimize.png"))
+        self.bt_maximizar.setIcon(QtGui.QIcon("imagenes/maximize.png"))
+        self.bt_cerrar.setIcon(QtGui.QIcon("imagenes/cancel.png"))
+
+        # Conectar botones a funciones
+        self.bt_restaurar.clicked.connect(self.showNormal)
+        self.bt_minimizar.clicked.connect(self.showMinimized)
+        self.bt_maximizar.clicked.connect(self.showMaximized)
+        self.bt_cerrar.clicked.connect(self.close)
+
+        self.setWindowFlags(QtCore.Qt.WindowType.FramelessWindowHint)
 
 class QMainWindow(object):
     def setupUi(self, MainWindow):

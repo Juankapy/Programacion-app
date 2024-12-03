@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>613</width>
+    <height>454</height>
+   </rect>
+  </property>
   <property name="minimumSize">
    <size>
     <width>400</width>
@@ -95,15 +103,26 @@ background-color:#4780b2;
            <height>16777215</height>
           </size>
          </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
 background-color: #4780b2;
 font: 87 12pt &quot;Arial Black&quot;;
 border-radius:0px;
+text-align: left;
+padding-left: 17px;
 }
 
 QPushButton:hover{
-background-color: white;
+background-color: #90D5FF;
 font: 87 12pt &quot;Arial Black&quot;;
 
 }
@@ -114,13 +133,16 @@ font: 87 12pt &quot;Arial Black&quot;;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>hamburger.png</normaloff>hamburger.png</iconset>
+           <normaloff>imagenes/hamburger.png</normaloff>imagenes/hamburger.png</iconset>
          </property>
          <property name="iconSize">
           <size>
            <width>32</width>
            <height>32</height>
           </size>
+         </property>
+         <property name="autoRepeatInterval">
+          <number>100</number>
          </property>
          <property name="autoDefault">
           <bool>false</bool>
@@ -146,44 +168,7 @@ font: 87 12pt &quot;Arial Black&quot;;
          </property>
         </spacer>
        </item>
-       <item alignment="Qt::AlignRight">
-        <widget class="QPushButton" name="bt_minimizar">
-         <property name="minimumSize">
-          <size>
-           <width>35</width>
-           <height>35</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton{
-border:0px;
-}
-
-QPushButton:hover{
-border:1px solid black;
-background-color:#ff9788;
-
-}</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>minimize.png</normaloff>minimize.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>32</width>
-           <height>32</height>
-          </size>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item alignment="Qt::AlignRight">
+       <item>
         <widget class="QPushButton" name="bt_restaurar">
          <property name="maximumSize">
           <size>
@@ -198,9 +183,7 @@ border:0px;
 }
 
 QPushButton:hover{
-border:1px solid black;
-background-color:#ff9788;
-
+background-color:#5092cb;
 }
 </string>
          </property>
@@ -209,13 +192,48 @@ background-color:#ff9788;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>new-tab.png</normaloff>new-tab.png</iconset>
+           <normaloff>imagenes/new-tab.png</normaloff>imagenes/new-tab.png</iconset>
          </property>
          <property name="iconSize">
           <size>
            <width>30</width>
            <height>30</height>
           </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bt_minimizar">
+         <property name="minimumSize">
+          <size>
+           <width>35</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+border:0px;
+}
+
+QPushButton:hover{
+background-color:#5092cb;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>imagenes/minimize.png</normaloff>imagenes/minimize.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -234,9 +252,7 @@ border:0px;
 }
 
 QPushButton:hover{
-border:1px solid black;
-background-color:#ff9788;
-
+background-color:#5092cb;
 }
 </string>
          </property>
@@ -245,7 +261,7 @@ background-color:#ff9788;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>maximize.png</normaloff>maximize.png</iconset>
+           <normaloff>imagenes/maximize.png</normaloff>imagenes/maximize.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -270,9 +286,7 @@ border:0px;
 }
 
 QPushButton:hover{
-border:1px solid black;
 background-color:#ff9788;
-
 }
 </string>
          </property>
@@ -281,7 +295,7 @@ background-color:#ff9788;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>cancel.png</normaloff>cancel.png</iconset>
+           <normaloff>imagenes/cancel.png</normaloff>imagenes/cancel.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -348,6 +362,7 @@ background-color:#ff9788;
           <string notr="true">
 QFrame{
 background-color:#4780b2;
+align-items: center;
 }
 
 
@@ -419,7 +434,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>home.png</normaloff>home.png</iconset>
+              <normaloff>imagenes/home.png</normaloff>imagenes/home.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -448,7 +463,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>database.png</normaloff>database.png</iconset>
+              <normaloff>imagenes/database.png</normaloff>imagenes/database.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -459,7 +474,7 @@ border-bottom-left-radius: 20px;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_dos">
+           <widget class="QPushButton" name="bt_buscar">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -470,11 +485,11 @@ border-bottom-left-radius: 20px;
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>Buscar</string>
+             <string>BUSCAR</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>magnifying-glass.png</normaloff>magnifying-glass.png</iconset>
+              <normaloff>imagenes/magnifying-glass.png</normaloff>imagenes/magnifying-glass.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -496,11 +511,11 @@ border-bottom-left-radius: 20px;
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>Insertar</string>
+             <string>INSERTAR</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>add.png</normaloff>add.png</iconset>
+              <normaloff>imagenes/add.png</normaloff>imagenes/add.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -511,7 +526,7 @@ border-bottom-left-radius: 20px;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_cuatro">
+           <widget class="QPushButton" name="bt_eliminar">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -522,11 +537,11 @@ border-bottom-left-radius: 20px;
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>Eliminar</string>
+             <string>ELIMINAR</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>trash-bin.png</normaloff>trash-bin.png</iconset>
+              <normaloff>imagenes/trash-bin.png</normaloff>imagenes/trash-bin.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -537,7 +552,7 @@ border-bottom-left-radius: 20px;
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_cinco">
+           <widget class="QPushButton" name="bt_actualizar">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -548,11 +563,11 @@ border-bottom-left-radius: 20px;
              <string notr="true"/>
             </property>
             <property name="text">
-             <string>Modificar</string>
+             <string>ACTUALIZAR</string>
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>file.png</normaloff>file.png</iconset>
+              <normaloff>imagenes/file.png</normaloff>imagenes/file.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -587,12 +602,12 @@ border-bottom-left-radius: 20px;
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>barra-de-menus.png</normaloff>barra-de-menus.png</iconset>
+                <normaloff>imagenes/engranaje.png</normaloff>imagenes/engranaje.png</iconset>
               </property>
               <property name="iconSize">
                <size>
-                <width>32</width>
-                <height>32</height>
+                <width>25</width>
+                <height>25</height>
                </size>
               </property>
              </widget>

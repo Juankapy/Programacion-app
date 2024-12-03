@@ -133,7 +133,7 @@ font: 87 12pt &quot;Arial Black&quot;;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>hamburger.png</normaloff>hamburger.png</iconset>
+           <normaloff>imagenes/hamburger.png</normaloff>imagenes/hamburger.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -192,7 +192,7 @@ background-color:#5092cb;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>new-tab.png</normaloff>new-tab.png</iconset>
+           <normaloff>imagenes/new-tab.png</normaloff>imagenes/new-tab.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -224,7 +224,7 @@ background-color:#5092cb;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>minimize.png</normaloff>minimize.png</iconset>
+           <normaloff>imagenes/minimize.png</normaloff>imagenes/minimize.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -261,7 +261,7 @@ background-color:#5092cb;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>maximize.png</normaloff>maximize.png</iconset>
+           <normaloff>imagenes/maximize.png</normaloff>imagenes/maximize.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -295,7 +295,7 @@ background-color:#ff9788;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>cancel.png</normaloff>cancel.png</iconset>
+           <normaloff>imagenes/cancel.png</normaloff>imagenes/cancel.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -433,7 +433,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>home.png</normaloff>home.png</iconset>
+              <normaloff>imagenes/home.png</normaloff>imagenes/home.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -462,7 +462,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>database.png</normaloff>database.png</iconset>
+              <normaloff>imagenes/database.png</normaloff>imagenes/database.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -488,7 +488,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>magnifying-glass.png</normaloff>magnifying-glass.png</iconset>
+              <normaloff>imagenes/magnifying-glass.png</normaloff>imagenes/magnifying-glass.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -514,7 +514,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>add.png</normaloff>add.png</iconset>
+              <normaloff>imagenes/add.png</normaloff>imagenes/add.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -540,7 +540,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>trash-bin.png</normaloff>trash-bin.png</iconset>
+              <normaloff>imagenes/trash-bin.png</normaloff>imagenes/trash-bin.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -566,7 +566,7 @@ border-bottom-left-radius: 20px;
             </property>
             <property name="icon">
              <iconset>
-              <normaloff>file.png</normaloff>file.png</iconset>
+              <normaloff>imagenes/file.png</normaloff>imagenes/file.png</iconset>
             </property>
             <property name="iconSize">
              <size>

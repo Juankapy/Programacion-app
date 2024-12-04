@@ -110,4 +110,88 @@ telefono_empleados,
 empleados;
 */
 
+INSERT INTO empleados (DNI, Nombre, Titulacion, email, Años_experiencia, tipo_via, nombre_via, codigo_postal, localidad, provincia) VALUES
+('12345678A', 'Juan Pérez', 'Ingeniero', 'juan.perez@example.com', 5, 'calle', 'Calle Mayor', '28001', 'Madrid', 'Madrid'),
+('23456789B', 'Ana Gómez', 'Diseñadora', 'ana.gomez@example.com', 3, 'avenida', 'Avenida de la Paz', '28002', 'Madrid', 'Madrid'),
+('34567890C', 'Luis Fernández', 'Arquitecto', 'luis.fernandez@example.com', 8, 'plaza', 'Plaza de España', '28003', 'Madrid', 'Madrid'),
+('45678901D', 'María López', 'Ingeniera', 'maria.lopez@example.com', 2, 'calle', 'Calle Gran Vía', '28004', 'Madrid', 'Madrid'),
+('56789012E', 'Pedro Torres', 'Diseñador', 'pedro.torres@example.com', 6, 'avenida', 'Avenida de América', '28005', 'Madrid', 'Madrid'),
+('67890123F', 'Laura Martínez', 'Arquitecta', 'laura.martinez@example.com', 4, 'plaza', 'Plaza Cibeles', '28006', 'Madrid', 'Madrid'),
+('78901234G', 'Sergio Ruiz', 'Ingeniero', 'sergio.ruiz@example.com', 7, 'calle', 'Calle de Vallehermoso', '28007', 'Madrid', 'Madrid'),
+('89012345H', 'Cristina Sánchez', 'Diseñadora', 'cristina.sanchez@example.com', 1, 'avenida', 'Avenida de los Reyes', '28008', 'Madrid', 'Madrid'),
+('90123456I', 'Javier Martín', 'Arquitecto', 'javier.martin@example.com', 9, 'plaza', 'Plaza de Castilla', '28009', 'Madrid', 'Madrid'),
+('01234567J', 'Elena Jiménez', 'Ingeniera', 'elena.jimenez@example.com', 10, 'calle', 'Calle de Serrano', '28010', 'Madrid', 'Madrid');
+
+INSERT INTO telefono_empleados (id_empleado, telefono_emp) VALUES
+(1, '612345678'),
+(1, '623456789'),
+(2, '634567890'),
+(3, '645678901'),
+(4, '656789012'),
+(5, '667890123'),
+(6, '678901234'),
+(7, '689012345'),
+(8, '690123456'),
+(9, '601234567');
+
+INSERT INTO prototipos (id_proto_rel, Nombre, Descripción, Fecha_inicio, Fecha_fin, Presupuesto, Horas_est) VALUES
+(NULL, 'Prototipo 1', 'Descripción del prototipo 1', '2023-01-01', '2023-03-01', 15000.00, 40),
+(NULL, 'Prototipo 2', 'Descripción del prototipo 2', '2023-02-01', '2023-04-01', 20000.00, 50),
+(NULL, 'Prototipo 3', 'Descripción del prototipo 3', '2023-03-01', '2023-05-01', 12000.00, 30),
+(NULL, 'Prototipo 4', 'Descripción del prototipo 4', '2023-04-01', '2023-06-01', 18000.00, 60),
+(NULL, 'Prototipo 5', 'Descripción del prototipo 5', '2023-05-01', '2023-07-01', 25000.00, 70),
+(NULL, 'Prototipo 6', 'Descripción del prototipo 6', '2023-06-01', '2023-08-01', 16000.00, 35),
+(NULL, 'Prototipo 7', 'Descripción del prototipo 7', '2023-07-01', '2023-09-01', 22000.00, 45),
+(NULL, 'Prototipo 8', 'Descripción del prototipo 8', '2023-08-01', '2023-10-01', 11000.00, 25),
+(NULL, 'Prototipo 9', 'Descripción del prototipo 9', '2023-09-01', '2023-11-01', 19000.00, 55),
+(NULL, 'Prototipo 10', 'Descripción del prototipo 10', '2023-10-01', '2023-12-01', 13000.00, 65);
+
+INSERT INTO gastos (id_emp, id_proto, Descripcion, Fecha, Importe, Tipo) VALUES
+(1, 1, 'Gastos de materiales', '2023-01-15', 5000.00, 'Material'),
+(2, 1, 'Servicios externos', '2023-01-20', 3000.00, 'Servicio'),
+(3, 2, 'Gastos de materiales', '2023-02-15', 7000.00, 'Material'),
+(4, 2, 'Servicios externos', '2023-02-20', 2000.00, 'Servicio'),
+(5, 3, 'Gastos de materiales', '2023-03-15', 4000.00, 'Material'),
+(6, 3, 'Servicios externos', '2023-03-20', 1500.00, 'Servicio'),
+(7, 4, 'Gastos de materiales', '2023-04-15', 8000.00, 'Material'),
+(8, 4, 'Servicios externos', '2023-04-20', 2500.00, 'Servicio'),
+(9, 5, 'Gastos de materiales', '2023-05-15', 6000.00, 'Material'),
+(10, 5, 'Servicios externos', '2023-05-20', 3500.00, 'Servicio');
+
+INSERT INTO etapas (id_proto, Nombre, Fecha_inicio, Fecha_fin, Estado) VALUES
+(1, 'Etapa 1', '2023-01-01', '2023-01-15', 'Finalizada'),
+(1, 'Etapa 2', '2023-01-16', '2023-02-01', 'En desarrollo'),
+(2, 'Etapa 1', '2023-02-01', '2023-02-15', 'Finalizada'),
+(2, 'Etapa 2', '2023-02-16', '2023-03-01', 'En desarrollo'),
+(3, 'Etapa 1', '2023-03-01', '2023-03-15', 'Finalizada'),
+(3, 'Etapa 2', '2023-03-16', '2023-04-01', 'En desarrollo'),
+(4, 'Etapa 1', '2023-04-01', '2023-04-15', 'Finalizada'),
+(4, 'Etapa 2', '2023-04-16', '2023-05-01', 'En desarrollo'),
+(5, 'Etapa 1', '2023-05-01', '2023-05-15', 'Finalizada'),
+(5, 'Etapa 2', '2023-05-16', '2023-06-01', 'En desarrollo');
+
+INSERT INTO recursos (Nombre, Descripción, Tipo) VALUES
+('Recurso 1', 'Descripción del recurso 1', 'Material'),
+('Recurso 2', 'Descripción del recurso 2', 'Herramienta'),
+('Recurso 3', 'Descripción del recurso 3', 'Equipo'),
+('Recurso 4', 'Descripción del recurso 4', 'Material'),
+('Recurso 5', 'Descripción del recurso 5', 'Herramienta'),
+('Recurso 6', 'Descripción del recurso 6', 'Equipo'),
+('Recurso 7', 'Descripción del recurso 7', 'Material'),
+('Recurso 8', 'Descripción del recurso 8', 'Herramienta'),
+('Recurso 9', 'Descripción del recurso 9', 'Equipo'),
+('Recurso 10', 'Descripción del recurso 10', 'Material');
+
+INSERT INTO asigna_recurso (id_etapa, id_recu) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(3, 4),
+(3, 5),
+(4, 6),
+(5, 7),
+(5, 8),
+(6, 9),
+(7, 10);
+
 

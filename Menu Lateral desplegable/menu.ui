@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>613</width>
-    <height>454</height>
+    <height>549</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -345,7 +345,7 @@ background-color:#ff9788;
          </property>
          <property name="maximumSize">
           <size>
-           <width>800</width>
+           <width>0</width>
            <height>16777215</height>
           </size>
          </property>
@@ -372,7 +372,7 @@ border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
 
 font: 75 10pt &quot;Arial black&quot;;
-	
+
 }
 
 QPushButton:hover{
@@ -578,6 +578,9 @@ border-bottom-left-radius: 20px;
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
              <spacer name="horizontalSpacer_2">
               <property name="orientation">
@@ -589,7 +592,7 @@ border-bottom-left-radius: 20px;
               <property name="sizeHint" stdset="0">
                <size>
                 <width>128</width>
-                <height>20</height>
+                <height>0</height>
                </size>
               </property>
              </spacer>
@@ -667,7 +670,7 @@ border-bottom-left-radius: 20px;
              <number>0</number>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="page">
              <layout class="QVBoxLayout" name="verticalLayout_9"/>
@@ -745,7 +748,7 @@ font: 87 36pt &quot;Arial Black&quot;;</string>
              <property name="styleSheet">
               <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_8">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
               <item>
                <widget class="QPushButton" name="pushButton">
                 <property name="styleSheet">

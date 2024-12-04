@@ -362,7 +362,6 @@ background-color:#ff9788;
           <string notr="true">
 QFrame{
 background-color:#4780b2;
-align-items: center;
 }
 
 
@@ -602,7 +601,7 @@ border-bottom-left-radius: 20px;
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>imagenes/engranaje.png</normaloff>imagenes/engranaje.png</iconset>
+                <normaloff>engranaje.png</normaloff>engranaje.png</iconset>
               </property>
               <property name="iconSize">
                <size>

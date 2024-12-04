@@ -345,7 +345,7 @@ background-color:#ff9788;
          </property>
          <property name="maximumSize">
           <size>
-           <width>0</width>
+           <width>800</width>
            <height>16777215</height>
           </size>
          </property>
@@ -595,13 +595,13 @@ border-bottom-left-radius: 20px;
              </spacer>
             </item>
             <item>
-             <widget class="QToolButton" name="toolButton">
+             <widget class="QToolButton" name="bt_tool">
               <property name="text">
                <string>...</string>
               </property>
               <property name="icon">
                <iconset>
-                <normaloff>engranaje.png</normaloff>engranaje.png</iconset>
+                <normaloff>imagenes/engranaje.png</normaloff>imagenes/engranaje.png</iconset>
               </property>
               <property name="iconSize">
                <size>

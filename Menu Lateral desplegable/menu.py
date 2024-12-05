@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from PyQt6 import QtCore, QtGui, QtWidgets, uic
 from PyQt6.QtCore import Qt, QPoint, QPropertyAnimation
-from PyQt6.QtWidgets import QApplication, QMainWindow
+from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidget, QTableWidgetItem
 from Base import fetch_all_data
 
 class MainWindow(QMainWindow):
@@ -15,13 +15,13 @@ class MainWindow(QMainWindow):
         self.bt_cerrar.setIcon(QtGui.QIcon("imagenes/cancel.png"))
         self.bt_tool.setIcon(QtGui.QIcon("imagenes/engranaje.png"))
         self.bt_menu.setIcon(QtGui.QIcon("imagenes/hamburger.png"))
+        self.bt_BD.setIcon(QtGui.QIcon("imagenes/database.png"))
 
         self.bt_restaurar.clicked.connect(self.showNormal)
         self.bt_minimizar.clicked.connect(self.showMinimized)
         self.bt_maximizar.clicked.connect(self.showMaximized)
         self.bt_cerrar.clicked.connect(self.close)
         self.bt_BD.clicked.connect(self.load_data)
-
         self.bt_tool.clicked.connect(self.show_settings_page)
         self.bt_menu.clicked.connect(self.toggle_side_panel)
 
@@ -29,14 +29,7 @@ class MainWindow(QMainWindow):
         self.resize(800, 600)
         self.old_position = None
 
-        self.stackedWidget.setCurrentIndex(0)
-
-        self.bt_load_data.clicked.connect(self.load_data)
-
-        self.tableWidget = QTableWidget(self)
-        self.tableWidget.setGeometry(10, 10, 800, 400)
-        self.tableWidget.setAlternatingRowColors(True)
-        self.is_panel_visible = True
+        #self.stackedWidget.setCurrentIndex(0) quiero que salga otra cosa al inicio
 
 
     def mousePressEvent(self, event):
@@ -70,23 +63,28 @@ class MainWindow(QMainWindow):
         self.is_panel_visible = not self.is_panel_visible
 
     def load_data(self):
-        query = "SELECT * FROM prototipos"  # Cambia esto por tu consulta
+        self.tableWidget.setGeometry(10, 10, 800, 400)
+        self.tableWidget.setAlternatingRowColors(True)
+        self.is_panel_visible = True
+
+        query = "SELECT * FROM empleados"
         try:
-            columns, data = fetch_all_data(query)  # Llama a la función de conexión
+            columns, data = fetch_all_data(query)
             self.display_data(columns, data)
         except Exception as e:
             print(f"Error al cargar datos: {e}")
 
     def display_data(self, columns, data):
-        self.tableWidget.setRowCount(0)  # Limpia la tabla
-        self.tableWidget.setColumnCount(len(columns))  # Define columnas
-        self.tableWidget.setHorizontalHeaderLabels(columns)  # Etiquetas de columnas
+        self.tableWidget.setRowCount(0)
+        self.tableWidget.setColumnCount(len(columns))
+        self.tableWidget.setHorizontalHeaderLabels(columns)
 
         # Llena la tabla con datos
         for row_num, row_data in enumerate(data):
             self.tableWidget.insertRow(row_num)
             for col_num, cell_data in enumerate(row_data):
                 self.tableWidget.setItem(row_num, col_num, QTableWidgetItem(str(cell_data)))
+        self.stackedWidget.setCurrentWidget(self.page_uno)
 
 if __name__ == "__main__":
     app = QApplication([])

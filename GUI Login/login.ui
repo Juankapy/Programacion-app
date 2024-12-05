@@ -401,7 +401,7 @@ border: 2px solid #90D5FF;
                <item>
                 <widget class="QLabel" name="lb_Correo">
                  <property name="text">
-                  <string>Indique Correo</string>
+                  <string>Indique DNI/NIF</string>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -527,23 +527,6 @@ border: 2px solid #90D5FF;
                </item>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_2">
-                 <item>
-                  <widget class="QPushButton" name="pushButton_2">
-                   <property name="text">
-                    <string>Facebook</string>
-                   </property>
-                   <property name="icon">
-                    <iconset>
-                     <normaloff>image/facebook.png</normaloff>image/facebook.png</iconset>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>35</width>
-                     <height>35</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
                  <item>
                   <widget class="QPushButton" name="pushButton_3">
                    <property name="text">

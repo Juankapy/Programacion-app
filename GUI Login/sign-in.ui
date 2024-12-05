@@ -374,7 +374,7 @@ border: 2px solid #90D5FF;
                   <string notr="true">font: 63 18pt &quot;Bahnschrift SemiBold&quot;;</string>
                  </property>
                  <property name="text">
-                  <string>Crear Cuenta</string>
+                  <string>Registrarse</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>

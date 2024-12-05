@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>449</height>
+    <width>833</width>
+    <height>447</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -671,26 +671,16 @@ border-bottom-left-radius: 20px;
              <number>0</number>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page_uno">
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_4">
                 <item>
-                 <widget class="QPushButton" name="bt_etapas">
+                 <widget class="QPushButton" name="bt_empleados">
                   <property name="text">
-                   <string>Etapas</string>
-                  </property>
-                  <attribute name="buttonGroup">
-                   <string notr="true">buttonGroup</string>
-                  </attribute>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="bt_asignacion">
-                  <property name="text">
-                   <string>Asignacion</string>
+                   <string>Empleados</string>
                   </property>
                   <attribute name="buttonGroup">
                    <string notr="true">buttonGroup</string>
@@ -718,9 +708,9 @@ border-bottom-left-radius: 20px;
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="bt_empleados">
+                 <widget class="QPushButton" name="bt_etapas">
                   <property name="text">
-                   <string>Empleados</string>
+                   <string>Etapas</string>
                   </property>
                   <attribute name="buttonGroup">
                    <string notr="true">buttonGroup</string>
@@ -737,10 +727,20 @@ border-bottom-left-radius: 20px;
                   </attribute>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QPushButton" name="bt_asignacion">
+                  <property name="text">
+                   <string>Asignacion</string>
+                  </property>
+                  <attribute name="buttonGroup">
+                   <string notr="true">buttonGroup</string>
+                  </attribute>
+                 </widget>
+                </item>
                </layout>
               </item>
               <item>
-               <widget class="QTableWidget" name="tableWidget"/>
+               <widget class="QTableView" name="Tablabasededatos"/>
               </item>
              </layout>
             </widget>
@@ -750,10 +750,98 @@ border-bottom-left-radius: 20px;
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4"/>
             </widget>
-            <widget class="QWidget" name="no">
+            <widget class="QWidget" name="page_dos">
              <property name="styleSheet">
               <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
+             <widget class="QTableWidget" name="tableWidget">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>50</y>
+                <width>591</width>
+                <height>291</height>
+               </rect>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="bt_etapas_2">
+              <property name="geometry">
+               <rect>
+                <x>318</x>
+                <y>20</y>
+                <width>96</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Etapas</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="bt_prototipos_2">
+              <property name="geometry">
+               <rect>
+                <x>215</x>
+                <y>20</y>
+                <width>97</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Prototipos</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="bt_empleados_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>97</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Empleados</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="bt_recursos_2">
+              <property name="geometry">
+               <rect>
+                <x>420</x>
+                <y>20</y>
+                <width>97</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Recursos</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="bt_asignacion_2">
+              <property name="geometry">
+               <rect>
+                <x>523</x>
+                <y>20</y>
+                <width>96</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Asignacion</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="bt_gastos_2">
+              <property name="geometry">
+               <rect>
+                <x>113</x>
+                <y>20</y>
+                <width>96</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Gastos</string>
+              </property>
+             </widget>
             </widget>
             <widget class="QWidget" name="page_tres">
              <layout class="QVBoxLayout" name="verticalLayout_6"/>

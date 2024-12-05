@@ -43,7 +43,7 @@ class MainWindow(QMainWindow):
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:
             self.old_position = event.globalPosition().toPoint()
-
+zx
     def mouseMoveEvent(self, event):
         if event.buttons() == Qt.MouseButton.LeftButton and self.old_position:
             delta = QPoint(event.globalPosition().toPoint() - self.old_position)

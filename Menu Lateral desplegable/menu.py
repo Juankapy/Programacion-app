@@ -23,19 +23,26 @@ class MainWindow(QMainWindow):
         self.bt_minimizar.clicked.connect(self.showMinimized)
         self.bt_maximizar.clicked.connect(self.showMaximized)
         self.bt_cerrar.clicked.connect(self.close)
-        self.bt_BD.clicked.connect(lambda: self.load_data("empleados"))
+        self.bt_BD.clicked.connect(lambda: self.load_data)
         self.bt_tool.clicked.connect(self.show_settings_page)
         self.bt_menu.clicked.connect(self.toggle_side_panel)
         self.bt_empleados.clicked.connect(lambda: self.load_data("empleados"))
         self.bt_gastos.clicked.connect(lambda: self.load_data("gastos"))
+        self.bt_prototipos.clicked.connect(lambda: self.load_data("prototipos"))
+        self.bt_etapas.clicked.connect(lambda: self.load_data("etapas"))
+        self.bt_recursos.clicked.connect(lambda: self.load_data("recursos"))
+        self.bt_etapas.clicked.connect(lambda: self.load_data("etapas"))
 
         # Configurar ventana sin bordes
         self.setWindowFlags(QtCore.Qt.WindowType.FramelessWindowHint)
         self.resize(800, 600)
         self.old_position = None
 
+        self.tableWidget.setGeometry(10, 10, 800, 400)
+        self.tableWidget.setAlternatingRowColors(True)
+
         # Configurar página inicial
-        self.stackedWidget.setCurrentWidget(self.page)  # Cambia "page_inicio" por tu página inicial deseada
+        #self.stackedWidget.setCurrentWidget(self.page)  # Cambia "page_inicio" por tu página inicial deseada
 
         # Estado inicial del panel lateral
         self.is_panel_visible = True
@@ -51,7 +58,7 @@ zx
             self.old_position = event.globalPosition().toPoint()
 
     def show_settings_page(self):
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(3)
 
     def toggle_side_panel(self):
         current_width = self.frame_lateral.width()
@@ -64,7 +71,6 @@ zx
         animation.setEasingCurve(QtCore.QEasingCurve.Type.InOutQuad)
         animation.start()
 
-        # Cambiar ícono del botón según el estado
         if self.is_panel_visible:
             self.bt_menu.setIcon(QtGui.QIcon("imagenes/hamburger-open.png"))
         else:
@@ -72,9 +78,7 @@ zx
         self.is_panel_visible = not self.is_panel_visible
 
     def load_data(self, table_name):
-        self.tableWidget.setGeometry(10, 10, 800, 400)
-        self.tableWidget.setAlternatingRowColors(True)
-
+        print(f"Cargando datos de la tabla: {table_name}")
         query = f"SELECT * FROM {table_name}"
         try:
             # Llamar a fetch_all_data para obtener columnas y datos
@@ -84,7 +88,6 @@ zx
             self.display_data(columns, data)
         except Exception as e:
             print(f"Error al cargar datos de la tabla '{table_name}': {e}")
-
     def display_data(self, columns, data):
     # Limpiar la tabla
         self.tableWidget.setRowCount(0)

@@ -672,15 +672,7 @@ border-bottom-left-radius: 20px;
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
               <item>
-               <widget class="QPushButton" name="pushButton_5">
-                <property name="styleSheet">
-                 <string notr="true">background-color: rgb(85, 170, 255);
-font: 87 36pt &quot;Arial Black&quot;;</string>
-                </property>
-                <property name="text">
-                 <string>1</string>
-                </property>
-               </widget>
+               <widget class="QTableWidget" name="tableWidget"/>
               </item>
              </layout>
             </widget>

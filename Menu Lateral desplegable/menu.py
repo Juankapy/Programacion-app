@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
         self.bt_tool.setIcon(QtGui.QIcon("imagenes/engranaje.png"))
         self.bt_menu.setIcon(QtGui.QIcon("imagenes/hamburger.png"))
         self.bt_BD.setIcon(QtGui.QIcon("imagenes/database.png"))
-        self.setWindowIcon(QtGui.QIcon("imagenes/.ico"))
+        self.setWindowIcon(QtGui.QIcon("imagenes/Logo .ico"))
 
         # Conectar botones
         self.bt_restaurar.clicked.connect(self.showNormal)

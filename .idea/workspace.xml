@@ -5,8 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b33d44c-3531-4f9d-92bb-d09f56c51e27" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/App_Menu_Base/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login_Sing_in/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Login_Sing_in/sing-in_window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu Lateral desplegable/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/check-square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/chevron-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/chevron-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/fondo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/google.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/lock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/maximize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/minimize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/minus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/new-tab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/square.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/image/x.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/login.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI Login/sign-in.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/Base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/Logo .ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/database.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/engranaje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/file.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/hamburger.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/magnifying-glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/maximize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/minimize.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/new-tab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/imagenes/trash-bin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/joder joder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/menu.ui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Menu Lateral desplegable/screenshot.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,6 +278,8 @@
       <workItem from="1732798953429" duration="794000" />
       <workItem from="1733314291323" duration="811000" />
       <workItem from="1733404130279" duration="767000" />
+      <workItem from="1733832593292" duration="46000" />
+      <workItem from="1733832980128" duration="3486000" />
     </task>
     <servers />
   </component>
@@ -248,7 +287,8 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/menu_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1733404224827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
+    <SUITE FILE_PATH="coverage/menu_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1733833903489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
     <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$Py_Base_de_datos.coverage" NAME="Py-Base de datos Coverage Results" MODIFIED="1732799438498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
+    <SUITE FILE_PATH="coverage/menu_py$Login.coverage" NAME="Login Coverage Results" MODIFIED="1733833933833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI Login" />
   </component>
 </project>

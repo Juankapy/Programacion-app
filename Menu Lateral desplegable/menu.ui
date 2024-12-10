@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>833</width>
+    <width>856</width>
     <height>447</height>
    </rect>
   </property>
@@ -679,6 +679,12 @@ border-bottom-left-radius: 20px;
                <layout class="QHBoxLayout" name="horizontalLayout_4">
                 <item>
                  <widget class="QPushButton" name="bt_empleados">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Empleados</string>
                   </property>
@@ -689,6 +695,12 @@ border-bottom-left-radius: 20px;
                 </item>
                 <item>
                  <widget class="QPushButton" name="bt_gastos">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Gastos</string>
                   </property>
@@ -699,6 +711,12 @@ border-bottom-left-radius: 20px;
                 </item>
                 <item>
                  <widget class="QPushButton" name="bt_prototipos">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Prototipos</string>
                   </property>
@@ -709,6 +727,12 @@ border-bottom-left-radius: 20px;
                 </item>
                 <item>
                  <widget class="QPushButton" name="bt_etapas">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Etapas</string>
                   </property>
@@ -719,6 +743,12 @@ border-bottom-left-radius: 20px;
                 </item>
                 <item>
                  <widget class="QPushButton" name="bt_recursos">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Recursos</string>
                   </property>
@@ -729,6 +759,12 @@ border-bottom-left-radius: 20px;
                 </item>
                 <item>
                  <widget class="QPushButton" name="bt_asignacion">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
                   <property name="text">
                    <string>Asignacion</string>
                   </property>
@@ -740,7 +776,64 @@ border-bottom-left-radius: 20px;
                </layout>
               </item>
               <item>
-               <widget class="QTableView" name="Tablabasededatos"/>
+               <widget class="QLabel" name="lbl_no_data">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">setVisible:False</string>
+                </property>
+                <property name="text">
+                 <string>No hay datos todavía</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTableWidget" name="tableWidget"/>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>70</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>Actualizar</string>
+                </property>
+                <property name="default">
+                 <bool>false</bool>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
@@ -754,16 +847,6 @@ border-bottom-left-radius: 20px;
              <property name="styleSheet">
               <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
-             <widget class="QTableWidget" name="tableWidget">
-              <property name="geometry">
-               <rect>
-                <x>20</x>
-                <y>50</y>
-                <width>591</width>
-                <height>291</height>
-               </rect>
-              </property>
-             </widget>
              <widget class="QPushButton" name="bt_etapas_2">
               <property name="geometry">
                <rect>

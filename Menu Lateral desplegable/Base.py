@@ -1,5 +1,4 @@
 import mysql.connector
-
 def get_database_connection():
     config = {
         'user': 'root',  # Cambia según tu configuración
@@ -16,8 +15,8 @@ def fetch_all_data(query):
     cursor = conn.cursor()
     try:
         cursor.execute(query)
-        data = cursor.fetchall()  # Obtener filas
-        columns = [desc[0] for desc in cursor.description]  # Obtener nombres de columnas
+        data = cursor.fetchall()
+        columns = [desc[0] for desc in cursor.description]
         return columns, data
     except mysql.connector.Error as e:
         print(f"Error en la consulta: {e}")
@@ -26,7 +25,6 @@ def fetch_all_data(query):
         cursor.close()
         conn.close()
 
-# Conectar a la base de datos
 
 def insert_data(table, columns, values):
     conn = get_database_connection()

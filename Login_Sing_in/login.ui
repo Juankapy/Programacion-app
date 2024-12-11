@@ -500,16 +500,9 @@ border: 2px solid #90D5FF;
                 </spacer>
                </item>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QLabel" name="Men_error_DNI">
+                <widget class="QLabel" name="lb_error">
                  <property name="text">
-                  <string>DNI INCORRECTO</string>
-                 </property>
-                </widget>
-               </item>
-               <item alignment="Qt::AlignHCenter">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>CONTRASEÑA INCORRECTA</string>
+                  <string>                      </string>
                  </property>
                 </widget>
                </item>

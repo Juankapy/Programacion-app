@@ -397,7 +397,11 @@ border: 2px solid #90D5FF;
                  </property>
                 </spacer>
                </item>
+<<<<<<< HEAD:GUI Login/sign-in.ui
                <item>
+=======
+               <item alignment="Qt::AlignLeft">
+>>>>>>> main:Login_Sing_in/sign-in.ui
                 <widget class="QLabel" name="lb_Correo">
                  <property name="text">
                   <string>Nombre</string>

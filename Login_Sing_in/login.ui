@@ -507,7 +507,7 @@ border: 2px solid #90D5FF;
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton">
+                <widget class="QPushButton" name="IniciarSesion">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>

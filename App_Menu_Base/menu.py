@@ -1,13 +1,13 @@
 from PyQt6 import QtCore, QtGui, QtWidgets , uic
 from PyQt6.QtCore import Qt, QPoint, QPropertyAnimation
 from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEdit, QVBoxLayout, QWidget, QLabel
-from .Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
+from App_Menu_Base.Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
 import sys
 
-class MainWindow(QMainWindow):
+class MenuWindow(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
-        uic.loadUi("menu.ui", self)
+        super(MenuWindow, self).__init__()
+        uic.loadUi("C:/Users/mrnat/Desktop/Repo-clase/Programacion-app/App_Menu_Base/menu.ui", self)
 
         # Configuración de íconos
         self.bt_restaurar.setIcon(QtGui.QIcon("imagenes/new-tab.png"))
@@ -193,6 +193,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = MainWindow()
+    window = MenuWindow()
     window.show()
     app.exec()

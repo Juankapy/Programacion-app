@@ -1,7 +1,7 @@
 from PyQt6 import QtCore, QtGui, QtWidgets , uic
 from PyQt6.QtCore import Qt, QPoint, QPropertyAnimation
 from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEdit, QVBoxLayout, QWidget, QLabel
-from Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
+from .Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
 import sys
 
 class MainWindow(QMainWindow):

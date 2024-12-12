@@ -1,18 +1,75 @@
-from Base import get_connection  # Importar la función de conexión a la base de datos desde Base.py
-import bcrypt  # Librería para verificar contraseñas cifradas
+import mysql.connector
+from mysql.connector import Error
+
+def connect_to_db():
+    """
+    Establece una conexión con la base de datos y la devuelve.
+    """
+    try:
+        connection = mysql.connector.connect(
+            user='root',  # Usuario de la base de datos
+            password='1234',  # Contraseña del usuario
+            host='localhost',  # Dirección del servidor
+            database='prototipos',  # Nombre de la base de datos
+            port='3307'  # Puerto del servidor
+        )
+        return connection
+    except Error as e:
+        print(f"Error al conectar con la base de datos: {e}")
+        return None
 
 def login(username, password):
-    connection = get_connection()
-    try:
-        with connection.cursor() as cursor:
-            # Buscar al usuario en la base de datos por el nombre de usuario
-            query = "SELECT * FROM empleados WHERE nombre = %s"
-            cursor.execute(query, (username,))
-            user = cursor.fetchone()
+    """
+    Verifica las credenciales del usuario contra la base de datos.
 
-            # Si el usuario existe y la contraseña es correcta
-            if user and bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
-                return user  # Retornar los datos del usuario si el login es exitoso
-            return None  # Si no se encuentra el usuario o la contraseña es incorrecta, retornar None
-    finally:
+    Args:
+        username (str): El correo electrónico del usuario que intenta iniciar sesión.
+        password (str): La contraseña proporcionada por el usuario.
+
+    Returns:
+        dict: Un diccionario con la información del usuario si las credenciales son válidas.
+        None: Si las credenciales son incorrectas o hay un error.
+    """
+    try:
+        # Conectar a la base de datos
+        connection = connect_to_db()
+        if not connection:
+            return None
+
+        cursor = connection.cursor(dictionary=True)  # cursor devuelve filas como diccionarios
+
+        # Consulta para verificar las credenciales
+        query = """
+        SELECT id, nombre, apellidos, numero_telefonico, dni_nif, correo_electronico
+        FROM gestores
+        WHERE DNI_NIF = %s AND contraseña = %s
+        """
+
+        # Ejecutar la consulta
+        cursor.execute(query, (username, password))
+
+        # Obtener el resultado
+        user = cursor.fetchone()
+
+        # Cerrar recursos
+        cursor.close()
         connection.close()
+
+        if user:
+            return user  # Retorna el diccionario con la información del usuario
+        else:
+            print("Credenciales incorrectas.")
+            return None
+
+    except Error as e:
+        print(f"Error durante el proceso de login: {e}")
+        return None
+
+# NOTA: Para mayor seguridad, las contraseñas deben ser encriptadas.
+# En lugar de comparar contraseñas directamente, puedes usar una biblioteca como bcrypt.
+# Por ejemplo, almacenarías una contraseña encriptada en la base de datos,
+# y luego usarías bcrypt para verificarla así:
+#
+# import bcrypt
+# hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+# bcrypt.checkpw(password.encode('utf-8'), hashed_password)

@@ -499,8 +499,6 @@ border: 2px solid #90D5FF;
                  </property>
                 </spacer>
                </item>
-<<<<<<< HEAD:GUI Login/login.ui
-=======
                <item alignment="Qt::AlignHCenter">
                 <widget class="QLabel" name="lb_error">
                  <property name="text">
@@ -508,7 +506,6 @@ border: 2px solid #90D5FF;
                  </property>
                 </widget>
                </item>
->>>>>>> main:Login_Sing_in/login.ui
                <item>
                 <widget class="QPushButton" name="pushButton">
                  <property name="minimumSize">

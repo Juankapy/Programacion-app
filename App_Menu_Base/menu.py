@@ -4,9 +4,9 @@ from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEd
 from App_Menu_Base.Base import fetch_all_data   # Importar la configuración desde tu archivo de conexión
 import sys
 
-class MainWindow(QMainWindow):
+class MenuWindow(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(MenuWindow, self).__init__()
         uic.loadUi("menu.ui", self)
 
         # Configuración de íconos
@@ -33,6 +33,7 @@ class MainWindow(QMainWindow):
         self.bt_insert.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_tres))
         self.bt_eliminar.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_cuatro))
         self.searchButton.clicked.connect(lambda: self.setup_search())
+        self.searchbar.returnPressed.connect(self.search_record)
 
         self.bt_buscar.clicked.connect(self.toggle_search_widget)
         self.bt_empleados.clicked.connect(lambda: self.load_data("empleados"))
@@ -67,19 +68,19 @@ class MainWindow(QMainWindow):
 
     def setup_search(self):
         # Conectar el botón de búsqueda o el evento de enter en el campo de texto
-        self.searchLineEdit.returnPressed.connect(self.search_record)  # Reemplaza "searchLineEdit" con el nombre correcto
+        self.searchbar.returnPressed.connect(self.search_record)  # Reemplaza "searchLineEdit" con el nombre correcto
         self.searchButton.clicked.connect(self.search_record)  # Si tienes un botón de búsqueda
 
     def search_record(self):
         # Obtener el texto del campo de búsqueda
-        search_id = self.searchLineEdit.text()
+        search_id = self.searchbar.text()
 
         if not search_id.isdigit():
             self.statusBar().showMessage("Por favor ingresa un ID válido")
             return
 
         # Consulta a la base de datos
-        query = f"SELECT id_prototipo, id_empleado, importe, descripcion, fecha FROM gastos WHERE id = {search_id}"
+        query = f"SELECT * FROM empleados WHERE ID = {search_id}"
         try:
             _, result = fetch_all_data(query)
 
@@ -88,14 +89,19 @@ class MainWindow(QMainWindow):
                 return
 
             # Extraer los datos
-            id_prototipo, id_empleado, importe, descripcion, fecha = result[0]
+            DNI,Nombre,Titulacion, email, Años_experiencia, tipo_via, nombre_via, codigo_postal, localidad, provincia = result[0]
 
             # Llenar los campos
-            self.idp_1.setText(str(id_prototipo))  # Reemplaza con el nombre real de tu widget
-            self.ide_1.setText(str(id_empleado))
-            self.importe1.setText(str(importe))
-            self.descrip1.setPlainText(descripcion)
-            self.fecha1.setDate(QtCore.QDate.fromString(fecha, "dd-MM-yyyy"))
+            self.dni.setText(str(DNI))  # Reemplaza con el nombre real de tu widget
+            self.nom.setText(str(Nombre))
+            self.titu.setText(str(Titulacion))
+            self.email.setText(email)
+            self.via.setText(str(tipo_via))
+            self.exp.setText(str(Años_experiencia))
+            self.nom.setText(str(nombre_via))
+            self.cp.setText(str(codigo_postal))
+            self.localidad.setText(str(localidad))
+            self.provincia.setText(str(provincia))
 
             self.statusBar().showMessage("Datos cargados correctamente")
         except Exception as e:
@@ -155,14 +161,14 @@ class MainWindow(QMainWindow):
         self.is_panel_visible = not self.is_panel_visible
 
     def load_data(self, table_name):
-        query = f"SELECT * FROM {table_name}"
+        query = f"SELECT * FROM {table_name}"  # Asegúrate de que 'table_name' es seguro
         print(f"Ejecutando consulta: {query}")
 
         try:
-            columns, data = fetch_all_data(query)
+            columns, data = fetch_all_data(query)  # Llamada a tu función
             if not data:
                 print(f"La tabla '{table_name}' está vacía.")
-            self.display_data(columns, data)
+            self.display_data(columns, data)  # Método para mostrar los datos en tu tabla
         except Exception as e:
             print(f"Error al cargar datos de la tabla '{table_name}': {e}")
 
@@ -193,6 +199,6 @@ class MainWindow(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication([])
-    window = MainWindow()
+    window = MenuWindow()
     window.show()
     app.exec()

@@ -671,7 +671,7 @@ border-bottom-left-radius: 20px;
              <number>0</number>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page_uno">
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -1017,6 +1017,14 @@ color:white;</string>
                  <number>0</number>
                 </property>
                 <widget class="QWidget" name="gastos1">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>702</width>
+                   <height>581</height>
+                  </rect>
+                 </property>
                  <attribute name="label">
                   <string>Gastos</string>
                  </attribute>
@@ -1114,6 +1122,14 @@ p, li { white-space: pre-wrap; }
                  </layout>
                 </widget>
                 <widget class="QWidget" name="prototipos1">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>719</width>
+                   <height>398</height>
+                  </rect>
+                 </property>
                  <attribute name="label">
                   <string>Prototipos</string>
                  </attribute>
@@ -1310,6 +1326,14 @@ p, li { white-space: pre-wrap; }
                  <zorder>textEdit_16</zorder>
                 </widget>
                 <widget class="QWidget" name="recursos1">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>719</width>
+                   <height>398</height>
+                  </rect>
+                 </property>
                  <attribute name="label">
                   <string>Recursos</string>
                  </attribute>

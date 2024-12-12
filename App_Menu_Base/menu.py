@@ -34,7 +34,6 @@ class MainWindow(QMainWindow):
         self.bt_eliminar.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_cuatro))
         self.searchButton.clicked.connect(lambda: self.setup_search())
 
-        # Conectar el botón de búsqueda
         self.bt_buscar.clicked.connect(self.toggle_search_widget)
         self.bt_empleados.clicked.connect(lambda: self.load_data("empleados"))
         self.bt_gastos.clicked.connect(lambda: self.load_data("gastos"))

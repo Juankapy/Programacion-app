@@ -30,6 +30,7 @@ class MainWindow(QMainWindow):
         self.bt_tool.clicked.connect(self.show_settings_page)
         self.bt_menu.clicked.connect(self.toggle_side_panel)
         self.bt_insert.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_tres))
+        self.bt_eliminar.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_cuatro))
 
         # Conectar el botón de búsqueda
         self.bt_buscar.clicked.connect(self.toggle_search_widget)

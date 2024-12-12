@@ -40,7 +40,7 @@ def login(username, password):
 
         # Consulta para verificar las credenciales
         query = """
-        SELECT id, nombre, apellidos, numero_telefonico, dni_nif, correo_electronico
+        SELECT ID, Nombre, Apellidos, DNI_NIF, email
         FROM gestores
         WHERE DNI_NIF = %s AND contraseña = %s
         """

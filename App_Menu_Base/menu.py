@@ -1,7 +1,8 @@
-from PyQt6 import QtCore, QtGui, QtWidgets, uic
+from PyQt6 import QtCore, QtGui, QtWidgets , uic
 from PyQt6.QtCore import Qt, QPoint, QPropertyAnimation
-from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem
+from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEdit, QVBoxLayout, QWidget, QLabel
 from Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
+import sys
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -16,6 +17,8 @@ class MainWindow(QMainWindow):
         self.bt_tool.setIcon(QtGui.QIcon("imagenes/engranaje.png"))
         self.bt_menu.setIcon(QtGui.QIcon("imagenes/hamburger.png"))
         self.bt_BD.setIcon(QtGui.QIcon("imagenes/database.png"))
+        self.bt_buscador.setIcon(QtGui.QIcon("imagenes/lupa.png"))
+
         self.setWindowIcon(QtGui.QIcon("imagenes/Logo .ico"))
 
         # Conectar botones
@@ -26,8 +29,10 @@ class MainWindow(QMainWindow):
         self.bt_BD.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_uno))
         self.bt_tool.clicked.connect(self.show_settings_page)
         self.bt_menu.clicked.connect(self.toggle_side_panel)
+        self.bt_insert.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_tres))
 
-        # Botones para cargar datos de las tablas
+        # Conectar el botón de búsqueda
+        self.bt_buscar.clicked.connect(self.toggle_search_widget)
         self.bt_empleados.clicked.connect(lambda: self.load_data("empleados"))
         self.bt_gastos.clicked.connect(lambda: self.load_data("gastos"))
         self.bt_prototipos.clicked.connect(lambda: self.load_data("prototipos"))
@@ -43,11 +48,40 @@ class MainWindow(QMainWindow):
         self.tableWidget.setGeometry(10, 10, 800, 400)
         self.tableWidget.setAlternatingRowColors(True)
 
+        self.searchbar = self.findChild(QLineEdit, "searchbar") # Busca el QLineEdit por su nombre
+        self.widget_bar.setVisible(False)
+
+        self.timer = QtCore.QTimer(self)
+        self.timer.setSingleShot(True)
+        self.timer.timeout.connect(self.hide_search_widget)
+
         # Configurar página inicial
         self.stackedWidget.setCurrentWidget(self.page)  # Cambia "page" por la página inicial adecuada
 
         # Estado inicial del panel lateral
         self.is_panel_visible = True
+
+    def toggle_search_widget(self):
+        if self.widget_bar.isVisible():
+            self.hide_search_widget()
+        else:
+            self.show_search_widget()
+
+    def show_search_widget(self):
+        self.widget_bar.setVisible(True)
+        self.timer.stop()  # Detener el temporizador si estaba corriendo
+        # Aquí puedes agregar la animación para mostrar el widget
+
+    def hide_search_widget(self):
+        self.widget_bar.setVisible(False)
+        self.timer.start(2000)  # Iniciar el temporizador para ocultar después de 2 segundos
+
+    def update_display(self, text):
+        for label in self.labels:
+            if text.lower() in label.text().lower():
+                label.show()
+            else:
+                label.hide()
 
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:

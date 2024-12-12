@@ -3,6 +3,24 @@
 CREATE OR REPLACE DATABASE PROTOTIPOS;
 USE PROTOTIPOS;
 
+CREATE OR REPLACE TABLE gestores(
+	ID INT AUTO_INCREMENT,
+	DNI_NIF CHAR(9)unique not null,
+	Nombre VARCHAR(20)not null,
+	Apellidos VARCHAR(40)not null,
+	email varchar(60)unique not null,
+	contraseña varchar(10)not null,
+	PRIMARY KEY(ID)
+);
+create or replace table telefono_gestores(	
+	id_gestores int,
+	telefono_gestores char(9),
+	primary key(id_gestores,telefono_gestores),
+	constraint tlf_gestores foreign key (id_gestores)
+		references gestores(id)
+		on delete cascade
+);
+
 CREATE OR REPLACE TABLE empleados(
 	ID INT AUTO_INCREMENT,
 	DNI CHAR(9),
@@ -197,5 +215,12 @@ INSERT INTO asigna_recurso (id_etapa, id_recu) VALUES
 (5, 8),
 (6, 9),
 (7, 10);
+
+INSERT INTO gestores (DNI_NIF, Nombre, Apellidos, email, contraseña) 
+VALUES 
+('12345678A', 'Juan', 'Pérez García', 'juan.perez@gmail.com', 'abc1234567'),
+('87654321B', 'María', 'López Martínez', 'maria.lopez@hotmail.com', 'secure9876'),
+('11223344C', 'Carlos', 'González Ruiz', 'carlos.gr@gmail.com', 'pass2023!#');
+
 
 

@@ -1,5 +1,7 @@
 from PyQt6.QtWidgets import QMainWindow, QMessageBox, QApplication
 from PyQt6 import uic
+import PyQt6.uic.properties
+from App_Menu_Base.menu import QApplication
 from auth import login  # Funciones de autenticación
 from App_Menu_Base import menu
 from App_Menu_Base import Base  # Ventana principal tras login exitoso
@@ -12,6 +14,22 @@ class LoginWindow(QMainWindow):
         # Conexión de los botones con sus respectivas funciones
         self.pushButton.clicked.connect(self.handle_login)  # Acción para el botón de login
 
+        # Configuración de íconos
+        self.bt_restaurar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/new-tab.png"))
+        self.bt_minimizar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/minimize.png"))
+        self.bt_maximizar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/maximize.png"))
+        self.bt_cerrar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/cancel.png"))
+
+        # Conectar botones
+        self.bt_restaurar.clicked.connect(self.showNormal)
+        self.bt_minimizar.clicked.connect(self.showMinimized)
+        self.bt_maximizar.clicked.connect(self.showMaximized)
+        self.bt_cerrar.clicked.connect(self.close)
+
+        # Configurar ventana sin bordes
+        self.setWindowFlags(PyQt6.uic.properties.QtCore.Qt.WindowType.FramelessWindowHint)
+        self.resize(800, 600)
+        self.old_position = None
 
         # Inicializa el QLabel de mensajes de error como invisible
         self.lb_error.setVisible(False)
@@ -47,7 +65,7 @@ class LoginWindow(QMainWindow):
         """
         Abre la ventana principal de la aplicación y cierra la ventana de login.
         """
-        self.menu_window = menu()  # Crea una instancia de la ventana principal
+        self.menu_window = QApplication  # Crea una instancia de la ventana principal
         self.menu_window.show()  # Muestra la ventana principal
         self.close()  # Cierra la ventana de login
 

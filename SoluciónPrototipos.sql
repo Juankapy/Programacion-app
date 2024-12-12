@@ -142,21 +142,25 @@ INSERT INTO prototipos (id_proto_rel, Nombre, Descripción, Fecha_inicio, Fecha_
 (NULL, 'Prototipo 5', 'Descripción del prototipo 5', '2023-05-01', '2023-07-01', 25000.00, 70),
 (NULL, 'Prototipo 6', 'Descripción del prototipo 6', '2023-06-01', '2023-08-01', 16000.00, 35),
 (NULL, 'Prototipo 7', 'Descripción del prototipo 7', '2023-07-01', '2023-09-01', 22000.00, 45),
-(NULL, 'Prototipo 8', 'Descripción del prototipo 8', '2023-08-01', '2023-10-01', 11000.00, 25),
+(NULL, 'Prototipo 8', 'Descripción del prototipo 8', '2023-08-01', '2023-10-01', 11000.00, 35),
 (NULL, 'Prototipo 9', 'Descripción del prototipo 9', '2023-09-01', '2023-11-01', 19000.00, 55),
 (NULL, 'Prototipo 10', 'Descripción del prototipo 10', '2023-10-01', '2023-12-01', 13000.00, 65);
 
+SELECT id FROM prototipos;
+
+
 INSERT INTO gastos (id_emp, id_proto, Descripcion, Fecha, Importe, Tipo) VALUES
-(1, 1, 'Gastos de materiales', '2023-01-15', 5000.00, 'Material'),
-(2, 1, 'Servicios externos', '2023-01-20', 3000.00, 'Servicio'),
-(3, 2, 'Gastos de materiales', '2023-02-15', 7000.00, 'Material'),
-(4, 2, 'Servicios externos', '2023-02-20', 2000.00, 'Servicio'),
-(5, 3, 'Gastos de materiales', '2023-03-15', 4000.00, 'Material'),
-(6, 3, 'Servicios externos', '2023-03-20', 1500.00, 'Servicio'),
-(7, 4, 'Gastos de materiales', '2023-04-15', 8000.00, 'Material'),
-(8, 4, 'Servicios externos', '2023-04-20', 2500.00, 'Servicio'),
-(9, 5, 'Gastos de materiales', '2023-05-15', 6000.00, 'Material'),
-(10, 5, 'Servicios externos', '2023-05-20', 3500.00, 'Servicio');
+(1, 21, 'Gastos de materiales', '2023-01-15', 5000.00, 'Material'),
+(2, 22, 'Servicios externos', '2023-01-20', 3000.00, 'Servicio'),
+(3, 23, 'Gastos de materiales', '2023-02-15', 7000.00, 'Material'),
+(4, 24, 'Servicios externos', '2023-02-20', 2000.00, 'Servicio'),
+(5, 25, 'Gastos de materiales', '2023-03-15', 4000.00, 'Material'),
+(6, 26, 'Servicios externos', '2023-03-20', 1500.00, 'Servicio'),
+(7, 27, 'Gastos de materiales', '2023-04-15', 8000.00, 'Material'),
+(8, 28, 'Servicios externos', '2023-04-20', 2500.00, 'Servicio'),
+(9, 29, 'Gastos de materiales', '2023-05-15', 6000.00, 'Material'),
+(10, 30, 'Servicios externos', '2023-05-20', 3500.00, 'Servicio');
+
 
 INSERT INTO etapas (id_proto, Nombre, Fecha_inicio, Fecha_fin, Estado) VALUES
 (1, 'Etapa 1', '2023-01-01', '2023-01-15', 'Finalizada'),
@@ -186,7 +190,7 @@ INSERT INTO asigna_recurso (id_etapa, id_recu) VALUES
 (1, 1),
 (1, 2),
 (2, 3),
-(3, 4),
+(3, 4),	
 (3, 5),
 (4, 6),
 (5, 7),

@@ -8,27 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App_Menu_Base/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Menu_Base/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App_Menu_Base/menu.ui" beforeDir="false" afterPath="$PROJECT_DIR$/App_Menu_Base/menu.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/cancel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/check-square.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/chevron-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/chevron-up.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/facebook.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/fondo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/google.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/lock.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/maximize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/minimize.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/minus.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/new-tab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/square.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/user.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/image/x.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/login.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/login_window.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/sign-in.ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/sing-in_window.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,7 +248,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$Py_Base_de_datos.coverage" NAME="Py-Base de datos Coverage Results" MODIFIED="1732799438498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
-    <SUITE FILE_PATH="coverage/menu_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1734040375274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
+    <SUITE FILE_PATH="coverage/menu_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1734042503230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
     <SUITE FILE_PATH="coverage/Programacion_app$menu.coverage" NAME="menu Coverage Results" MODIFIED="1733937620024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
     <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$app.coverage" NAME="app Coverage Results" MODIFIED="1734030134453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
     <SUITE FILE_PATH="coverage/menu_py$login_window.coverage" NAME="login_window Coverage Results" MODIFIED="1734034622615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Login_Sing_in" />

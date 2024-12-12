@@ -41,6 +41,14 @@ class MenuWindow(QMainWindow):
         self.bt_prototipos.clicked.connect(lambda: self.load_data("prototipos"))
         self.bt_etapas.clicked.connect(lambda: self.load_data("etapas"))
         self.bt_recursos.clicked.connect(lambda: self.load_data("recursos"))
+        self.bt_eli.clicked.connect(self.vaciar_celda)
+        self.bt_ins.clicked.connect(self.insertar_datos)
+        self.searchbar.returnPressed.connect(self.buscar_por_id)  # Activar búsqueda al presionar Enter
+
+
+
+        self.bt_actualizar1 = QtWidgets.QPushButton("Actualizar")
+        self.bt_actualizar1.clicked.connect(self.actualizar_datos)
 
         # Configurar ventana sin bordes
         self.setWindowFlags(QtCore.Qt.WindowType.FramelessWindowHint)
@@ -64,7 +72,56 @@ class MenuWindow(QMainWindow):
         # Estado inicial del panel lateral
         self.is_panel_visible = True
 
+    def buscar_por_id(self):
+        # Obtener el ID ingresado en la barra de búsqueda
+        search_id = self.searchbar.text()
 
+        if not search_id.isdigit():
+            self.statusBar().showMessage("Por favor ingresa un ID válido")
+            return
+
+        # Consulta para buscar el registro por ID
+        query = f"SELECT * FROM empleados WHERE ID = {search_id}"  # Asegúrate de que 'ID' es el nombre correcto de la columna
+
+        try:
+            columns, data = fetch_all_data(query)  # Llamada a tu función para obtener datos
+            self.tableWidget.setRowCount(0)
+            if not data:
+                self.statusBar().showMessage(f"No se encontraron registros con ID {search_id}.")
+                self.tableWidget.setRowCount(0)  # Limpiar la tabla
+                return
+
+            self.display_data(columns, data)  # Método para mostrar los datos en tu tabla
+            self.statusBar().showMessage(f"Resultados para ID {search_id}:")
+        except Exception as e:
+            self.statusBar().showMessage(f"Error al buscar: {e}")
+
+    def insertar_datos(self):
+        # Obtener la fila y la columna de la celda seleccionada
+        current_row = self.tableWidget.currentRow()
+        current_column = self.tableWidget.currentColumn()
+
+        if current_row >= 0 and current_column >= 0:
+            # Obtener el texto a insertar desde un QLineEdit (por ejemplo, searchbar)
+            new_data = self.searchbar.text()  # Suponiendo que uses un campo de búsqueda para ingresar datos
+
+            # Insertar el nuevo dato en la celda seleccionada
+            self.tableWidget.setItem(current_row, current_column, QTableWidgetItem(new_data))
+            self.statusBar().showMessage("Datos insertados correctamente")
+        else:
+            self.statusBar().showMessage("Por favor selecciona una celda para insertar datos")
+
+    def vaciar_celda(self):
+        # Obtener la fila y la columna de la celda seleccionada
+        current_row = self.tableWidget.currentRow()
+        current_column = self.tableWidget.currentColumn()
+
+        if current_row >= 0 and current_column >= 0:
+            # Vaciar la celda seleccionada
+            self.tableWidget.setItem(current_row, current_column, QTableWidgetItem(""))
+            self.statusBar().showMessage("Celda vaciada correctamente")
+        else:
+            self.statusBar().showMessage("Por favor selecciona una celda para vaciar")
 
     def setup_search(self):
         # Conectar el botón de búsqueda o el evento de enter en el campo de texto
@@ -160,6 +217,10 @@ class MenuWindow(QMainWindow):
             self.bt_menu.setIcon(QtGui.QIcon("imagenes/hamburger.png"))
         self.is_panel_visible = not self.is_panel_visible
 
+    def actualizar_datos(self):
+        # Puedes llamar a load_data con el nombre de la tabla que deseas actualizar
+        self.load_data("empleados")  # Cambia "empleados" por la tabla que desees actualizar
+
     def load_data(self, table_name):
         query = f"SELECT * FROM {table_name}"  # Asegúrate de que 'table_name' es seguro
         print(f"Ejecutando consulta: {query}")
@@ -168,7 +229,7 @@ class MenuWindow(QMainWindow):
             columns, data = fetch_all_data(query)  # Llamada a tu función
             if not data:
                 print(f"La tabla '{table_name}' está vacía.")
-            self.display_data(columns, data)  # Método para mostrar los datos en tu tabla
+            self.display_data(columns, data)  # Metodo para mostrar los datos en tu tabla
         except Exception as e:
             print(f"Error al cargar datos de la tabla '{table_name}': {e}")
 

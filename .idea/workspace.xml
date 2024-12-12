@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b33d44c-3531-4f9d-92bb-d09f56c51e27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Programacion-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Programacion-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App_Menu_Base/menu.ui" beforeDir="false" afterPath="$PROJECT_DIR$/App_Menu_Base/menu.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Login_Sing_in/login.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App_Menu_Base/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Menu_Base/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login_Sing_in/login_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Login_Sing_in/login_window.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +48,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -252,12 +249,12 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/menu_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1734008281204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
     <SUITE FILE_PATH="coverage/menu_py$login_window.coverage" NAME="login_window Coverage Results" MODIFIED="1734009752606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Login_Sing_in" />
-    <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1734026563306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
+    <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$menu.coverage" NAME="menu Coverage Results" MODIFIED="1734034046178" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
     <SUITE FILE_PATH="coverage/menu_py$Base.coverage" NAME="Base Coverage Results" MODIFIED="1733995701927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
     <SUITE FILE_PATH="coverage/Programacion_app$menu.coverage" NAME="menu Coverage Results" MODIFIED="1733937620024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
     <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$Py_Base_de_datos.coverage" NAME="Py-Base de datos Coverage Results" MODIFIED="1732799438498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
     <SUITE FILE_PATH="coverage/Programacion_app$Base.coverage" NAME="Base Coverage Results" MODIFIED="1733937552354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Menu Lateral desplegable" />
-    <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$app.coverage" NAME="app Coverage Results" MODIFIED="1734030134453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
-    <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$login_window.coverage" NAME="login_window Coverage Results" MODIFIED="1734031994564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Login_Sing_in" />
+    <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$app.coverage" NAME="app Coverage Results" MODIFIED="1734033957576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/App_Menu_Base" />
+    <SUITE FILE_PATH="coverage/Py_Base_de_datos_py$login_window.coverage" NAME="login_window Coverage Results" MODIFIED="1734033967486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Login_Sing_in" />
   </component>
 </project>

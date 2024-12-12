@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication
-from login_window import LoginWindow  # Importar la clase LoginWindow
+from Login_Sing_in.login_window import LoginWindow  # Verifica que login_window.py exista y tiene la clase LoginWindow
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

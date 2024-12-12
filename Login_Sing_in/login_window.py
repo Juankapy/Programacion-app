@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QMainWindow, QMessageBox, QApplication
 from PyQt6 import uic
 import PyQt6.uic.properties
 from App_Menu_Base.menu import QApplication
-from auth import login  # Funciones de autenticación
+from .auth import login  # Funciones de autenticación
 from App_Menu_Base import menu
 from App_Menu_Base import Base  # Ventana principal tras login exitoso
 

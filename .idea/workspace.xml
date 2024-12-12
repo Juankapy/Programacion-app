@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b33d44c-3531-4f9d-92bb-d09f56c51e27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/App_Menu_Base/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Login_Sing_in/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App_Menu_Base/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/App_Menu_Base/menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Login_Sing_in/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/Login_Sing_in/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Login_Sing_in/login.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/login_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/Login_Sing_in/login_window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login_Sing_in/sign-in.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Login_Sing_in/sign-in.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Base.executor": "Run",
-    "Python.login_window.executor": "Run",
-    "Python.menu.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Repo-Clase/Programacion-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Base.executor&quot;: &quot;Run&quot;,
+    &quot;Python.login_window.executor&quot;: &quot;Run&quot;,
+    &quot;Python.menu.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Repo-Clase/Programacion-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Repo-Clase\Programacion-app\App_Menu_Base" />
@@ -118,6 +113,7 @@
       <workItem from="1733933524841" duration="3041000" />
       <workItem from="1733937292114" duration="1028000" />
       <workItem from="1733989467321" duration="8104000" />
+      <workItem from="1734007901419" duration="321000" />
     </task>
     <servers />
   </component>

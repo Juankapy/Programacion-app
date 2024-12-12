@@ -18,6 +18,7 @@ class MainWindow(QMainWindow):
         self.bt_menu.setIcon(QtGui.QIcon("imagenes/hamburger.png"))
         self.bt_BD.setIcon(QtGui.QIcon("imagenes/database.png"))
         self.bt_buscador.setIcon(QtGui.QIcon("imagenes/lupa.png"))
+        self.searchButton.setIcon(QtGui.QIcon("imagenes/magnifying-glass.png"))
 
         self.setWindowIcon(QtGui.QIcon("imagenes/Logo .ico"))
 
@@ -31,6 +32,7 @@ class MainWindow(QMainWindow):
         self.bt_menu.clicked.connect(self.toggle_side_panel)
         self.bt_insert.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_tres))
         self.bt_eliminar.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_cuatro))
+        self.searchButton.clicked.connect(lambda: self.setup_search())
 
         # Conectar el botón de búsqueda
         self.bt_buscar.clicked.connect(self.toggle_search_widget)
@@ -61,6 +63,45 @@ class MainWindow(QMainWindow):
 
         # Estado inicial del panel lateral
         self.is_panel_visible = True
+
+
+
+    def setup_search(self):
+        # Conectar el botón de búsqueda o el evento de enter en el campo de texto
+        self.searchLineEdit.returnPressed.connect(self.search_record)  # Reemplaza "searchLineEdit" con el nombre correcto
+        self.searchButton.clicked.connect(self.search_record)  # Si tienes un botón de búsqueda
+
+    def search_record(self):
+        # Obtener el texto del campo de búsqueda
+        search_id = self.searchLineEdit.text()
+
+        if not search_id.isdigit():
+            self.statusBar().showMessage("Por favor ingresa un ID válido")
+            return
+
+        # Consulta a la base de datos
+        query = f"SELECT id_prototipo, id_empleado, importe, descripcion, fecha FROM gastos WHERE id = {search_id}"
+        try:
+            _, result = fetch_all_data(query)
+
+            if not result:
+                self.statusBar().showMessage("No se encontró información para este ID")
+                return
+
+            # Extraer los datos
+            id_prototipo, id_empleado, importe, descripcion, fecha = result[0]
+
+            # Llenar los campos
+            self.idp_1.setText(str(id_prototipo))  # Reemplaza con el nombre real de tu widget
+            self.ide_1.setText(str(id_empleado))
+            self.importe1.setText(str(importe))
+            self.descrip1.setPlainText(descripcion)
+            self.fecha1.setDate(QtCore.QDate.fromString(fecha, "dd-MM-yyyy"))
+
+            self.statusBar().showMessage("Datos cargados correctamente")
+        except Exception as e:
+            self.statusBar().showMessage(f"Error al buscar datos: {e}")
+        self.setup_search()
 
     def toggle_search_widget(self):
         if self.widget_bar.isVisible():

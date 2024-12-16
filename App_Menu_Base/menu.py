@@ -1,8 +1,11 @@
-from PyQt6 import QtCore, QtGui, QtWidgets , uic
+import subprocess
+
+from PyQt6 import QtCore, QtGui, QtWidgets, uic
 from PyQt6.QtCore import Qt, QPoint, QPropertyAnimation
-from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEdit, QVBoxLayout, QWidget, QLabel
-from App_Menu_Base.Base import fetch_all_data   # Importar la configuración desde tu archivo de conexión
-import sys
+from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEdit
+
+from Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
+
 
 class MenuWindow(QMainWindow):
     def __init__(self):
@@ -30,8 +33,8 @@ class MenuWindow(QMainWindow):
         self.bt_BD.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_uno))
         self.bt_tool.clicked.connect(self.show_settings_page)
         self.bt_menu.clicked.connect(self.toggle_side_panel)
-        self.bt_insert.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_tres))
-        self.bt_eliminar.clicked.connect(lambda: self.stackedWidget.setCurrentWidget(self.page_cuatro))
+        self.bt_insert.clicked.connect(self.abrir_insertar)
+        self.bt_eliminar.clicked.connect(self.abrir_eliminar)
         self.searchButton.clicked.connect(lambda: self.setup_search())
         self.searchbar.returnPressed.connect(self.search_record)
 
@@ -71,6 +74,12 @@ class MenuWindow(QMainWindow):
 
         # Estado inicial del panel lateral
         self.is_panel_visible = True
+
+    def abrir_insertar(self):
+        subprocess.Popen(["python", "insertar.py"])
+
+    def abrir_eliminar(self):
+        subprocess.Popen(["python", "eliminar.py"])
 
     def buscar_por_id(self):
         # Obtener el ID ingresado en la barra de búsqueda
@@ -117,6 +126,7 @@ class MenuWindow(QMainWindow):
         current_column = self.tableWidget.currentColumn()
 
         if current_row >= 0 and current_column >= 0:
+
             # Vaciar la celda seleccionada
             self.tableWidget.setItem(current_row, current_column, QTableWidgetItem(""))
             self.statusBar().showMessage("Celda vaciada correctamente")

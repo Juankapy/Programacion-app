@@ -8,22 +8,23 @@ from App_Menu_Base.Base import fetch_all_data
 class LoginWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("C:/Users/mrnat/Desktop/Repo-clase/Programacion-app/Login_Sing_in/login.ui", self)  # Carga del diseño desde el archivo .ui generado por QtDesigner
+        uic.loadUi("login.ui", self)  # Carga del diseño desde el archivo .ui generado por QtDesigner
 
         # Conexión de los botones con sus respectivas funciones
         self.IniciarSesion.clicked.connect(self.handle_login)  # Acción para el botón de login
 
         # Configuración de íconos
-        self.bt_restaurar.setIcon(PyQt6.uic.properties.QtGui.QIcon("C:/Users/mrnat/Desktop/Repo-clase/Programacion-app/Login_Sing_in/image/new-tab.png"))
-        self.bt_minimizar.setIcon(PyQt6.uic.properties.QtGui.QIcon("C:/Users/mrnat/Desktop/Repo-clase/Programacion-app/Login_Sing_in/image/minimize.png"))
-        self.bt_maximizar.setIcon(PyQt6.uic.properties.QtGui.QIcon("C:/Users/mrnat/Desktop/Repo-clase/Programacion-app/Login_Sing_in/image/maximize.png"))
-        self.bt_cerrar.setIcon(PyQt6.uic.properties.QtGui.QIcon("C:/Users/mrnat/Desktop/Repo-clase/Programacion-app/Login_Sing_in/image/cancel.png"))
+        self.bt_restaurar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/new-tab.png"))
+        self.bt_minimizar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/minimize.png"))
+        self.bt_maximizar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/maximize.png"))
+        self.bt_cerrar.setIcon(PyQt6.uic.properties.QtGui.QIcon("image/cancel.png"))
 
         # Conectar botones
         self.bt_restaurar.clicked.connect(self.showNormal)
         self.bt_minimizar.clicked.connect(self.showMinimized)
         self.bt_maximizar.clicked.connect(self.showMaximized)
         self.bt_cerrar.clicked.connect(self.close)
+
 
         # Configurar ventana sin bordes
         self.setWindowFlags(PyQt6.uic.properties.QtCore.Qt.WindowType.FramelessWindowHint)

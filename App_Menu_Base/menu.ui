@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>941</width>
-    <height>590</height>
+    <width>866</width>
+    <height>507</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -89,7 +89,7 @@ background-color:#4780b2;
        <property name="bottomMargin">
         <number>0</number>
        </property>
-       <item alignment="Qt::AlignLeft">
+       <item>
         <widget class="QPushButton" name="bt_menu">
          <property name="minimumSize">
           <size>
@@ -237,7 +237,7 @@ background-color:#5092cb;
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignRight">
+       <item>
         <widget class="QPushButton" name="bt_maximizar">
          <property name="maximumSize">
           <size>
@@ -271,7 +271,7 @@ background-color:#5092cb;
          </property>
         </widget>
        </item>
-       <item alignment="Qt::AlignRight">
+       <item>
         <widget class="QPushButton" name="bt_cerrar">
          <property name="maximumSize">
           <size>
@@ -336,7 +336,7 @@ background-color:#ff9788;
         <number>0</number>
        </property>
        <item>
-        <widget class="QFrame" name="frame_lateral">
+        <widget class="QFrame" name="frame_lateral_2">
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -402,7 +402,7 @@ border-bottom-left-radius: 20px;
          <property name="frameShadow">
           <enum>QFrame::Plain</enum>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
+         <layout class="QVBoxLayout" name="verticalLayout_16">
           <property name="spacing">
            <number>20</number>
           </property>
@@ -578,12 +578,12 @@ border-bottom-left-radius: 20px;
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <layout class="QHBoxLayout" name="horizontalLayout_14">
             <property name="spacing">
              <number>0</number>
             </property>
             <item>
-             <spacer name="horizontalSpacer_2">
+             <spacer name="horizontalSpacer_3">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -671,7 +671,7 @@ border-bottom-left-radius: 20px;
              <number>0</number>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>0</number>
             </property>
             <widget class="QWidget" name="page_uno">
              <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -695,60 +695,82 @@ border-bottom-left-radius: 20px;
                   <height>500</height>
                  </size>
                 </property>
-                <widget class="QLineEdit" name="lineEdit">
-                 <property name="geometry">
-                  <rect>
-                   <x>180</x>
-                   <y>0</y>
-                   <width>300</width>
-                   <height>20</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>300</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-                <widget class="QPushButton" name="bt_buscador">
-                 <property name="geometry">
-                  <rect>
-                   <x>144</x>
-                   <y>0</y>
-                   <width>21</width>
-                   <height>21</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>15</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>200</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normaloff>imagenes/imagenes/lupa.png</normaloff>imagenes/imagenes/lupa.png</iconset>
-                 </property>
-                 <property name="autoDefault">
-                  <bool>false</bool>
-                 </property>
-                 <property name="flat">
-                  <bool>true</bool>
-                 </property>
-                </widget>
+                <layout class="QVBoxLayout" name="verticalLayout_8">
+                 <item>
+                  <widget class="QWidget" name="widget_6" native="true">
+                   <layout class="QHBoxLayout" name="horizontalLayout_18">
+                    <item>
+                     <spacer name="horizontalSpacer_8">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>150</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="bt_buscador">
+                      <property name="minimumSize">
+                       <size>
+                        <width>15</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>200</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset>
+                        <normaloff>imagenes/lupa.png</normaloff>imagenes/lupa.png</iconset>
+                      </property>
+                      <property name="autoDefault">
+                       <bool>false</bool>
+                      </property>
+                      <property name="flat">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="searchbar">
+                      <property name="minimumSize">
+                       <size>
+                        <width>300</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <spacer name="horizontalSpacer_7">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>140</width>
+                        <height>20</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
               <item>
@@ -880,35 +902,31 @@ border-bottom-left-radius: 20px;
               <item>
                <widget class="QTableWidget" name="tableWidget"/>
               </item>
-              <item alignment="Qt::AlignRight">
-               <widget class="QPushButton" name="pushButton">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>40</height>
-                 </size>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                 <string>Actualizar</string>
-                </property>
-                <property name="default">
-                 <bool>false</bool>
-                </property>
+              <item>
+               <widget class="QWidget" name="widget_3" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item>
+                  <widget class="QPushButton" name="bt_ins">
+                   <property name="text">
+                    <string>Insertar</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="bt_eli">
+                   <property name="text">
+                    <string>Eliminar</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="bt_actualizar1">
+                   <property name="text">
+                    <string>Actualizar</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </widget>
               </item>
              </layout>
@@ -920,87 +938,18 @@ border-bottom-left-radius: 20px;
              <layout class="QVBoxLayout" name="verticalLayout_4"/>
             </widget>
             <widget class="QWidget" name="page_dos">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::NoContextMenu</enum>
+             </property>
+             <property name="acceptDrops">
+              <bool>true</bool>
+             </property>
              <property name="styleSheet">
               <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
-             <widget class="QPushButton" name="bt_etapas_2">
-              <property name="geometry">
-               <rect>
-                <x>318</x>
-                <y>20</y>
-                <width>96</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Etapas</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="bt_prototipos_2">
-              <property name="geometry">
-               <rect>
-                <x>215</x>
-                <y>20</y>
-                <width>97</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Prototipos</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="bt_empleados_2">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>20</y>
-                <width>97</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Empleados</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="bt_recursos_2">
-              <property name="geometry">
-               <rect>
-                <x>420</x>
-                <y>20</y>
-                <width>97</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Recursos</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="bt_asignacion_2">
-              <property name="geometry">
-               <rect>
-                <x>523</x>
-                <y>20</y>
-                <width>96</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Asignacion</string>
-              </property>
-             </widget>
-             <widget class="QPushButton" name="bt_gastos_2">
-              <property name="geometry">
-               <rect>
-                <x>113</x>
-                <y>20</y>
-                <width>96</width>
-                <height>23</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Gastos</string>
-              </property>
-             </widget>
             </widget>
             <widget class="QWidget" name="page_tres">
              <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -1016,902 +965,357 @@ color:white;</string>
                 <property name="currentIndex">
                  <number>0</number>
                 </property>
-                <widget class="QWidget" name="gastos1">
+                <widget class="QWidget" name="empleados">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>627</width>
+                   <height>725</height>
+                  </rect>
+                 </property>
                  <attribute name="label">
-                  <string>Gastos</string>
+                  <string>Empleados</string>
                  </attribute>
                  <layout class="QVBoxLayout" name="verticalLayout_5">
                   <item>
-                   <widget class="QLineEdit" name="searchLineEdit_7"/>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="searchButton">
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normaloff>imagenes/imagenes/magnifying-glass.png</normaloff>imagenes/imagenes/magnifying-glass.png</iconset>
-                    </property>
-                    <property name="flat">
-                     <bool>true</bool>
-                    </property>
+                   <widget class="QWidget" name="widget" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_5">
+                     <item>
+                      <widget class="QPushButton" name="searchButton">
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="icon">
+                        <iconset>
+                         <normaloff>imagenes/imagenes/magnifying-glass.png</normaloff>imagenes/imagenes/magnifying-glass.png</iconset>
+                       </property>
+                       <property name="flat">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="searchbar1">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QTextEdit" name="textEdit_32">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                   <widget class="QWidget" name="widget_12" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_9">
+                     <item>
+                      <widget class="QWidget" name="widget_8" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_10">
+                        <item>
+                         <widget class="QTextEdit" name="textEdit_37">
+                          <property name="html">
+                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Prototipo&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;DNI&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="dni"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QWidget" name="widget_7" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_13">
+                        <item>
+                         <widget class="QTextEdit" name="textEdit_38">
+                          <property name="html">
+                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Nombre&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="nom"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_2" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_6">
+                     <item>
+                      <widget class="QWidget" name="widget_9" native="true">
+                       <layout class="QHBoxLayout" name="horizontalLayout_7">
+                        <item>
+                         <widget class="QWidget" name="widget_10" native="true">
+                          <layout class="QVBoxLayout" name="verticalLayout_11">
+                           <item>
+                            <widget class="QTextEdit" name="textEdit_36">
+                             <property name="html">
+                              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Titulacion&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QTextEdit" name="textEdit_33">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="titu"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QWidget" name="widget_11" native="true">
+                          <layout class="QVBoxLayout" name="verticalLayout_12">
+                           <item>
+                            <widget class="QTextEdit" name="textEdit_34">
+                             <property name="html">
+                              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Descripcion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Email&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="email"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="id_p1_7"/>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="descrip1_7"/>
-                  </item>
-                  <item>
-                   <widget class="QTextEdit" name="textEdit_36">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                   <widget class="QWidget" name="widget_13" native="true">
+                    <layout class="QHBoxLayout" name="horizontalLayout_11">
+                     <item>
+                      <widget class="QWidget" name="widget_14" native="true">
+                       <layout class="QHBoxLayout" name="horizontalLayout_10">
+                        <item>
+                         <widget class="QWidget" name="widget_16" native="true">
+                          <layout class="QVBoxLayout" name="verticalLayout_14">
+                           <item>
+                            <widget class="QTextEdit" name="textEdit">
+                             <property name="html">
+                              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Empleado&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="id_e1_7"/>
-                  </item>
-                  <item>
-                   <widget class="QTextEdit" name="textEdit_34">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Tipo de via&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="via"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QWidget" name="widget_15" native="true">
+                          <layout class="QVBoxLayout" name="verticalLayout_15">
+                           <item>
+                            <widget class="QTextEdit" name="textEdit_35">
+                             <property name="html">
+                              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Importe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Años Experiencia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLineEdit" name="exp"/>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QTextEdit" name="textEdit_35">
-                    <property name="html">
-                     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+                   <widget class="QWidget" name="horizontalWidget" native="true">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_12">
+                     <item>
+                      <widget class="QWidget" name="verticalWidget_2" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_19">
+                        <item>
+                         <widget class="QTextEdit" name="textEdit_3">
+                          <property name="html">
+                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Fecha&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;CP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="cp"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QWidget" name="verticalWidget" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_18">
+                        <item>
+                         <widget class="QTextEdit" name="textEdit_2">
+                          <property name="html">
+                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Nombre via&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="nvia"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QDateEdit" name="fecha1_7"/>
-                  </item>
-                  <item>
-                   <widget class="QLineEdit" name="importe1_7"/>
+                   <widget class="QWidget" name="horizontalWidget" native="true">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>100</height>
+                     </size>
+                    </property>
+                    <property name="cursor">
+                     <cursorShape>ArrowCursor</cursorShape>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_13">
+                     <item>
+                      <widget class="QWidget" name="verticalWidget_2" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_21">
+                        <item>
+                         <widget class="QTextEdit" name="textEdit_5">
+                          <property name="html">
+                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Localidad&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="localidad"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QWidget" name="verticalWidget" native="true">
+                       <layout class="QVBoxLayout" name="verticalLayout_20">
+                        <item>
+                         <widget class="QTextEdit" name="textEdit_4">
+                          <property name="html">
+                           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Provincia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="provincia"/>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
                   </item>
                  </layout>
                 </widget>
                 <widget class="QWidget" name="prototipos1">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>644</width>
+                   <height>315</height>
+                  </rect>
+                 </property>
                  <attribute name="label">
                   <string>Prototipos</string>
                  </attribute>
-                 <widget class="QDateEdit" name="fecha1_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>530</x>
-                    <y>320</y>
-                    <width>110</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="descrip1_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>430</x>
-                    <y>160</y>
-                    <width>211</width>
-                    <height>91</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_12">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>290</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Importe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_13">
-                  <property name="geometry">
-                   <rect>
-                    <x>530</x>
-                    <y>290</y>
-                    <width>111</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Fecha&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_p1_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>160</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_e1_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>240</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="importe1_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>320</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_14">
-                  <property name="geometry">
-                   <rect>
-                    <x>430</x>
-                    <y>130</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Descripcion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="searchButton_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>180</x>
-                    <y>60</y>
-                    <width>31</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>imagenes/imagenes/magnifying-glass.png</normaloff>imagenes/imagenes/magnifying-glass.png</iconset>
-                  </property>
-                  <property name="flat">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_15">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>210</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Empleado&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="searchLineEdit_3">
-                  <property name="geometry">
-                   <rect>
-                    <x>230</x>
-                    <y>59</y>
-                    <width>291</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QWidget" name="widget_3" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>170</x>
-                    <y>50</y>
-                    <width>391</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_16">
-                  <property name="geometry">
-                   <rect>
-                    <x>70</x>
-                    <y>130</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Prototipo&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <zorder>widget_3</zorder>
-                 <zorder>fecha1_3</zorder>
-                 <zorder>descrip1_3</zorder>
-                 <zorder>textEdit_12</zorder>
-                 <zorder>textEdit_13</zorder>
-                 <zorder>id_p1_3</zorder>
-                 <zorder>id_e1_3</zorder>
-                 <zorder>importe1_3</zorder>
-                 <zorder>textEdit_14</zorder>
-                 <zorder>searchButton_3</zorder>
-                 <zorder>textEdit_15</zorder>
-                 <zorder>searchLineEdit_3</zorder>
-                 <zorder>textEdit_16</zorder>
                 </widget>
                 <widget class="QWidget" name="recursos1">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>644</width>
+                   <height>315</height>
+                  </rect>
+                 </property>
                  <attribute name="label">
                   <string>Recursos</string>
                  </attribute>
-                 <widget class="QDateEdit" name="fecha1_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>560</x>
-                    <y>340</y>
-                    <width>110</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="descrip1_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>460</x>
-                    <y>180</y>
-                    <width>211</width>
-                    <height>91</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_17">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>310</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Importe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_18">
-                  <property name="geometry">
-                   <rect>
-                    <x>560</x>
-                    <y>310</y>
-                    <width>111</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Fecha&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_p1_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>180</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_e1_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>260</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="importe1_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>340</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_19">
-                  <property name="geometry">
-                   <rect>
-                    <x>460</x>
-                    <y>150</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Descripcion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="searchButton_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>210</x>
-                    <y>80</y>
-                    <width>31</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>imagenes/imagenes/magnifying-glass.png</normaloff>imagenes/imagenes/magnifying-glass.png</iconset>
-                  </property>
-                  <property name="flat">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_20">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>230</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Empleado&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="searchLineEdit_4">
-                  <property name="geometry">
-                   <rect>
-                    <x>260</x>
-                    <y>79</y>
-                    <width>291</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QWidget" name="widget_4" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>200</x>
-                    <y>70</y>
-                    <width>391</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_21">
-                  <property name="geometry">
-                   <rect>
-                    <x>100</x>
-                    <y>150</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Prototipo&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <zorder>widget_4</zorder>
-                 <zorder>fecha1_4</zorder>
-                 <zorder>descrip1_4</zorder>
-                 <zorder>textEdit_17</zorder>
-                 <zorder>textEdit_18</zorder>
-                 <zorder>id_p1_4</zorder>
-                 <zorder>id_e1_4</zorder>
-                 <zorder>importe1_4</zorder>
-                 <zorder>textEdit_19</zorder>
-                 <zorder>searchButton_4</zorder>
-                 <zorder>textEdit_20</zorder>
-                 <zorder>searchLineEdit_4</zorder>
-                 <zorder>textEdit_21</zorder>
                 </widget>
                 <widget class="QWidget" name="etapas1">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>719</width>
-                   <height>398</height>
+                   <width>644</width>
+                   <height>315</height>
                   </rect>
                  </property>
                  <attribute name="label">
                   <string>Etapas</string>
                  </attribute>
-                 <widget class="QDateEdit" name="fecha1_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>570</x>
-                    <y>340</y>
-                    <width>110</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="descrip1_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>470</x>
-                    <y>180</y>
-                    <width>211</width>
-                    <height>91</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_22">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>310</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Importe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_23">
-                  <property name="geometry">
-                   <rect>
-                    <x>570</x>
-                    <y>310</y>
-                    <width>111</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Fecha&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_p1_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>180</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_e1_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>260</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="importe1_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>340</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_24">
-                  <property name="geometry">
-                   <rect>
-                    <x>470</x>
-                    <y>150</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Descripcion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="searchButton_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>220</x>
-                    <y>80</y>
-                    <width>31</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>imagenes/imagenes/magnifying-glass.png</normaloff>imagenes/imagenes/magnifying-glass.png</iconset>
-                  </property>
-                  <property name="flat">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_25">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>230</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Empleado&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="searchLineEdit_5">
-                  <property name="geometry">
-                   <rect>
-                    <x>270</x>
-                    <y>79</y>
-                    <width>291</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QWidget" name="widget_5" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>210</x>
-                    <y>70</y>
-                    <width>391</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_26">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>150</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Prototipo&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <zorder>widget_5</zorder>
-                 <zorder>fecha1_5</zorder>
-                 <zorder>descrip1_5</zorder>
-                 <zorder>textEdit_22</zorder>
-                 <zorder>textEdit_23</zorder>
-                 <zorder>id_p1_5</zorder>
-                 <zorder>id_e1_5</zorder>
-                 <zorder>importe1_5</zorder>
-                 <zorder>textEdit_24</zorder>
-                 <zorder>searchButton_5</zorder>
-                 <zorder>textEdit_25</zorder>
-                 <zorder>searchLineEdit_5</zorder>
-                 <zorder>textEdit_26</zorder>
                 </widget>
-                <widget class="QWidget" name="empleados1">
+                <widget class="QWidget" name="gastoss">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>719</width>
-                   <height>398</height>
+                   <width>644</width>
+                   <height>315</height>
                   </rect>
                  </property>
                  <attribute name="label">
-                  <string>Empleados</string>
+                  <string>Gastos</string>
                  </attribute>
-                 <widget class="QDateEdit" name="fecha1_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>570</x>
-                    <y>350</y>
-                    <width>110</width>
-                    <height>22</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="descrip1_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>470</x>
-                    <y>190</y>
-                    <width>211</width>
-                    <height>91</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_27">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>320</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Importe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_28">
-                  <property name="geometry">
-                   <rect>
-                    <x>570</x>
-                    <y>320</y>
-                    <width>111</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Fecha&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_p1_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>190</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="id_e1_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>270</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="importe1_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>350</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_29">
-                  <property name="geometry">
-                   <rect>
-                    <x>470</x>
-                    <y>160</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;Descripcion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QPushButton" name="searchButton_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>220</x>
-                    <y>90</y>
-                    <width>31</width>
-                    <height>23</height>
-                   </rect>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset>
-                    <normaloff>imagenes/imagenes/magnifying-glass.png</normaloff>imagenes/imagenes/magnifying-glass.png</iconset>
-                  </property>
-                  <property name="flat">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_30">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>240</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Empleado&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <widget class="QLineEdit" name="searchLineEdit_6">
-                  <property name="geometry">
-                   <rect>
-                    <x>270</x>
-                    <y>89</y>
-                    <width>291</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QWidget" name="widget_6" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>210</x>
-                    <y>80</y>
-                    <width>391</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                 </widget>
-                 <widget class="QTextEdit" name="textEdit_31">
-                  <property name="geometry">
-                   <rect>
-                    <x>110</x>
-                    <y>160</y>
-                    <width>211</width>
-                    <height>21</height>
-                   </rect>
-                  </property>
-                  <property name="html">
-                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;ID Prototipo&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:11pt; font-weight:600; color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                  </property>
-                 </widget>
-                 <zorder>widget_6</zorder>
-                 <zorder>fecha1_6</zorder>
-                 <zorder>descrip1_6</zorder>
-                 <zorder>textEdit_27</zorder>
-                 <zorder>textEdit_28</zorder>
-                 <zorder>id_p1_6</zorder>
-                 <zorder>id_e1_6</zorder>
-                 <zorder>importe1_6</zorder>
-                 <zorder>textEdit_29</zorder>
-                 <zorder>searchButton_6</zorder>
-                 <zorder>textEdit_30</zorder>
-                 <zorder>searchLineEdit_6</zorder>
-                 <zorder>textEdit_31</zorder>
                 </widget>
                </widget>
               </item>
@@ -1921,40 +1325,7 @@ p, li { white-space: pre-wrap; }
              <property name="styleSheet">
               <string notr="true">background-color: rgb(255, 255, 255);</string>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_7">
-              <item>
-               <widget class="QTabWidget" name="tabWidget">
-                <property name="currentIndex">
-                 <number>0</number>
-                </property>
-                <widget class="QWidget" name="gastos2">
-                 <attribute name="title">
-                  <string>Prototipos</string>
-                 </attribute>
-                </widget>
-                <widget class="QWidget" name="prototipos2">
-                 <attribute name="title">
-                  <string>Empleados</string>
-                 </attribute>
-                </widget>
-                <widget class="QWidget" name="recursos2">
-                 <attribute name="title">
-                  <string>Gastos</string>
-                 </attribute>
-                </widget>
-                <widget class="QWidget" name="etapas2">
-                 <attribute name="title">
-                  <string>Recursos</string>
-                 </attribute>
-                </widget>
-                <widget class="QWidget" name="empleados2">
-                 <attribute name="title">
-                  <string>Etapas</string>
-                 </attribute>
-                </widget>
-               </widget>
-              </item>
-             </layout>
+             <layout class="QVBoxLayout" name="verticalLayout_7"/>
             </widget>
             <widget class="QWidget" name="page_cinco">
              <property name="styleSheet">

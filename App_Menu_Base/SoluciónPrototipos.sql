@@ -168,16 +168,16 @@ SELECT id FROM prototipos;
 
 
 INSERT INTO gastos (id_emp, id_proto, Descripcion, Fecha, Importe, Tipo) VALUES
-(1, 21, 'Gastos de materiales', '2023-01-15', 5000.00, 'Material'),
-(2, 22, 'Servicios externos', '2023-01-20', 3000.00, 'Servicio'),
-(3, 23, 'Gastos de materiales', '2023-02-15', 7000.00, 'Material'),
-(4, 24, 'Servicios externos', '2023-02-20', 2000.00, 'Servicio'),
-(5, 25, 'Gastos de materiales', '2023-03-15', 4000.00, 'Material'),
-(6, 26, 'Servicios externos', '2023-03-20', 1500.00, 'Servicio'),
-(7, 27, 'Gastos de materiales', '2023-04-15', 8000.00, 'Material'),
-(8, 28, 'Servicios externos', '2023-04-20', 2500.00, 'Servicio'),
-(9, 29, 'Gastos de materiales', '2023-05-15', 6000.00, 'Material'),
-(10, 30, 'Servicios externos', '2023-05-20', 3500.00, 'Servicio');
+(1, 1, 'Gastos de materiales', '2023-01-15', 5000.00, 'Material'),
+(2, 2, 'Servicios externos', '2023-01-20', 3000.00, 'Servicio'),
+(3, 3, 'Gastos de materiales', '2023-02-15', 7000.00, 'Material'),
+(4, 4, 'Servicios externos', '2023-02-20', 2000.00, 'Servicio'),
+(5, 5, 'Gastos de materiales', '2023-03-15', 4000.00, 'Material'),
+(6, 6, 'Servicios externos', '2023-03-20', 1500.00, 'Servicio'),
+(7, 7, 'Gastos de materiales', '2023-04-15', 8000.00, 'Material'),
+(8, 8, 'Servicios externos', '2023-04-20', 2500.00, 'Servicio'),
+(9, 9, 'Gastos de materiales', '2023-05-15', 6000.00, 'Material'),
+(10, 10, 'Servicios externos', '2023-05-20', 3500.00, 'Servicio');
 
 
 INSERT INTO etapas (id_proto, Nombre, Fecha_inicio, Fecha_fin, Estado) VALUES
@@ -205,16 +205,16 @@ INSERT INTO recursos (Nombre, Descripción, Tipo) VALUES
 ('Recurso 10', 'Descripción del recurso 10', 'Material');
 
 INSERT INTO asigna_recurso (id_etapa, id_recu) VALUES
-(1, 1),
-(1, 2),
-(2, 3),
-(3, 4),	
-(3, 5),
-(4, 6),
-(5, 7),
-(5, 8),
-(6, 9),
-(7, 10);
+(112, 102,
+(155, 220),
+(212, 310),
+(32, 42),	
+(35, 51),
+(44, 63),
+(52, 74),
+(51, 85),
+(61, 95),
+(712, 190);
 
 INSERT INTO gestores (DNI_NIF, Nombre, Apellidos, email, contraseña) 
 VALUES 

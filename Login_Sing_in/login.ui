@@ -116,7 +116,7 @@ QPushButton:hover{
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_normal">
+           <widget class="QPushButton" name="bt_restaurar">
             <property name="minimumSize">
              <size>
               <width>38</width>
@@ -145,7 +145,7 @@ QPushButton:hover{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_minimize">
+           <widget class="QPushButton" name="bt_minimizar">
             <property name="minimumSize">
              <size>
               <width>38</width>
@@ -174,7 +174,7 @@ QPushButton:hover{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_maximize">
+           <widget class="QPushButton" name="bt_maximizar">
             <property name="minimumSize">
              <size>
               <width>38</width>
@@ -203,7 +203,7 @@ QPushButton:hover{
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="bt_close">
+           <widget class="QPushButton" name="bt_cerrar">
             <property name="minimumSize">
              <size>
               <width>38</width>
@@ -502,12 +502,12 @@ border: 2px solid #90D5FF;
                <item alignment="Qt::AlignHCenter">
                 <widget class="QLabel" name="lb_error">
                  <property name="text">
-                  <string>                      </string>
+                  <string/>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QPushButton" name="pushButton">
+                <widget class="QPushButton" name="IniciarSesion">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>

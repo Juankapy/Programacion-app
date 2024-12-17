@@ -26,15 +26,30 @@ def fetch_all_data(query):
         conn.close()
 
 
-def insert_data(table, columns, values):
+def insert_or_update_data(table, data):
+    """
+    Inserta o actualiza registros en la base de datos.
+    :param table: Nombre de la tabla.
+    :param data: Diccionario con las columnas y valores.
+    """
     conn = get_database_connection()
     cursor = conn.cursor()
+    try:
+        columns = ", ".join(data.keys())
+        placeholders = ", ".join(["%s"] * len(data))
+        update_clause = ", ".join([f"{key} = VALUES({key})" for key in data.keys()])
 
-    cols = ", ".join(columns)
-    placeholders = ", ".join(["%s"] * len(values))
-    query = f"INSERT INTO {table} ({cols}) VALUES ({placeholders})"
+        query = f"""
+        INSERT INTO {table} ({columns}) 
+        VALUES ({placeholders}) 
+        ON DUPLICATE KEY UPDATE {update_clause};
+        """
 
-    cursor.execute(query, values)
-    conn.commit()
-    conn.close()
-
+        cursor.execute(query, tuple(data.values()))
+        conn.commit()
+        print("Datos insertados/actualizados correctamente.")
+    except mysql.connector.Error as e:
+        print(f"Error al insertar/actualizar datos: {e}")
+    finally:
+        cursor.close()
+        conn.close()

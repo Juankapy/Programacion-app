@@ -36,6 +36,12 @@ CREATE OR REPLACE TABLE empleados(
 	PRIMARY KEY(ID),
 	UNIQUE(DNI)
 );
+
+describe empleados ;
+INSERT INTO empleados (dni, nombre, titulacion, email, años_experiencia, tipo_via, nombre_via, codigo_postal, localidad, provincia)
+VALUES ('11117890C', 'Luis Fernández', 'Arquitecto', 'luis.fernandez1@example.com', 3, 'plaza', 'Avenida de la Paz', '28003', 'Madrid', 'Madrid');
+
+
 create or replace table telefono_empleados(	
 	id_empleado int,
 	telefono_emp char(9),
@@ -221,6 +227,7 @@ VALUES
 ('12345678A', 'Juan', 'Pérez García', 'juan.perez@gmail.com', 'abc1234567'),
 ('87654321B', 'María', 'López Martínez', 'maria.lopez@hotmail.com', 'secure9876'),
 ('11223344C', 'Carlos', 'González Ruiz', 'carlos.gr@gmail.com', 'pass2023!#');
+
 
 
 

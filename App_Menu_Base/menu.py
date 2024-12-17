@@ -1,10 +1,10 @@
-import subprocess
-
 from PyQt6 import QtCore, QtGui, QtWidgets, uic
 from PyQt6.QtCore import Qt, QPoint, QPropertyAnimation
 from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QLineEdit
-
-from Base import fetch_all_data  # Importar la configuración desde tu archivo de conexión
+from Base import fetch_all_data
+import subprocess
+import sys
+import insertar
 
 
 class MenuWindow(QMainWindow):
